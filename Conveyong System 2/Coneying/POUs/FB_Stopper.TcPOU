@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="FB_Stopper" Id="{383cb24f-2c1b-461f-b125-d95395c56095}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_Stopper
+VAR
+	bStopperCylinder		AT%Q*		: BOOL; //Cylinder moves stopper down
+	bStopperSensor			AT%I*		: BOOL; //Sensor checks if stopper is occupied
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <Method Name="MoveStopper" Id="{700460a4-e30d-4180-a344-992e4150cd33}">
+      <Declaration><![CDATA[METHOD MoveStopper : BOOL
+VAR
+	Stopper:FB_Stopper;
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[IF NOT Stopper.Occupied THEN			//If stopper is nor occupied
+	Stopper.StopperCylinder:=TRUE;		//Move stopper up
+END_IF]]></ST>
+      </Implementation>
+    </Method>
+    <Property Name="Occupied" Id="{604a1840-cb70-441d-ac6c-c026757b33ab}">
+      <Declaration><![CDATA[PROPERTY Occupied : BOOL]]></Declaration>
+      <Get Name="Get" Id="{1e2eaaa3-99f3-4ba1-a8dc-81358aabc0ac}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[Occupied:=bStopperSensor;]]></ST>
+        </Implementation>
+      </Get>
+    </Property>
+    <Property Name="StopperCylinder" Id="{a8613c54-93a1-498d-8726-3638d396650b}">
+      <Declaration><![CDATA[PROPERTY StopperCylinder : BOOL]]></Declaration>
+      <Set Name="Set" Id="{fc328863-6a3c-43df-baae-74e1926005bf}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[bStopperCylinder:=StopperCylinder;]]></ST>
+        </Implementation>
+      </Set>
+    </Property>
+    <Method Name="StopperDown" Id="{78a327d4-05c4-470f-88ca-e4ddeb5918a0}">
+      <Declaration><![CDATA[METHOD StopperDown : BOOL
+VAR
+	Stopper:FB_Stopper;
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[IF NOT Stopper.Occupied THEN			//If stopper is nor occupied
+	Stopper.StopperCylinder:=FALSE;		//Move stopper up
+END_IF]]></ST>
+      </Implementation>
+    </Method>
+    <LineIds Name="FB_Stopper">
+      <LineId Id="9" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_Stopper.MoveStopper">
+      <LineId Id="5" Count="2" />
+    </LineIds>
+    <LineIds Name="FB_Stopper.Occupied.Get">
+      <LineId Id="2" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_Stopper.StopperCylinder.Set">
+      <LineId Id="2" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_Stopper.StopperDown">
+      <LineId Id="9" Count="1" />
+      <LineId Id="5" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

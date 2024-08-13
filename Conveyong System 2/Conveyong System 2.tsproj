@@ -1,0 +1,3889 @@
+<?xml version="1.0"?>
+<TcSmProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4024.44">
+	<Project ProjectGUID="{35BFD7BB-F602-4439-87B3-F3E60D68A43C}" Target64Bit="true" ShowHideConfigurations="#x106">
+		<System>
+			<Settings MaxCpus="4" NonWinCpus="1">
+				<Cpu CpuId="3"/>
+			</Settings>
+			<Licenses>
+				<Target>
+					<ManualSelect>{6952449D-F68C-49A2-ADE4-8639D85B33A4}</ManualSelect>
+					<ManualSelect>{A1AF8A04-C08D-4853-A5A0-0E6C3A278A8C}</ManualSelect>
+				</Target>
+			</Licenses>
+			<Tasks>
+				<Task Id="3" Priority="20" CycleTime="300000" AmsPort="350" AdtTasks="true">
+					<Name>PlcTask</Name>
+				</Task>
+			</Tasks>
+		</System>
+		<Plc>
+			<Project GUID="{CC8F7965-0465-4105-B5F9-3F87441553BD}" Name="Coneying" PrjFilePath="Coneying\Coneying.plcproj" TmcFilePath="Coneying\Coneying.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e">
+				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="Coneying\Coneying.tmc" TmcHash="{C5B68DF5-947E-4293-BC50-E6D20B4E2803}">
+					<Name>Coneying Instance</Name>
+					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
+					<Vars VarGrpType="1">
+						<Name>PlcTask Inputs</Name>
+						<Var>
+							<Name>MAIN.fbRoute9to3.GreenRight.Motor.bFuse</Name>
+							<Comment><![CDATA[Motor is Running]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to3.GreenRight.Motor.bThermistor</Name>
+							<Comment><![CDATA[Motor is Ok]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to3.GreenRight.LTU.bLightBarrier</Name>
+							<Comment><![CDATA[ LTU light sensor ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to3.GreenRight.LTU.bAtBottom</Name>
+							<Comment><![CDATA[Input At Bottom ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to3.GreenRight.LTU.bAtMiddle</Name>
+							<Comment><![CDATA[Input At Middle	 ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to3.GreenRight.LTU.bAtTop</Name>
+							<Comment><![CDATA[Input At Top ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to3.GreenRight.LTU.LTU_Motor.bFuse</Name>
+							<Comment><![CDATA[Motor is Running]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to3.GreenRight.LTU.LTU_Motor.bThermistor</Name>
+							<Comment><![CDATA[Motor is Ok]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to3.GreenRight.BlueStopper.bStopperSensor</Name>
+							<Comment><![CDATA[Sensor checks if stopper is occupied]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to3.GreenLeft.Motor.bFuse</Name>
+							<Comment><![CDATA[Motor is Running]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to3.GreenLeft.Motor.bThermistor</Name>
+							<Comment><![CDATA[Motor is Ok]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to3.GreenLeft.LTU.bLightBarrier</Name>
+							<Comment><![CDATA[ LTU light sensor ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to3.GreenLeft.LTU.bAtBottom</Name>
+							<Comment><![CDATA[Input At Bottom ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to3.GreenLeft.LTU.bAtMiddle</Name>
+							<Comment><![CDATA[Input At Middle	 ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to3.GreenLeft.LTU.bAtTop</Name>
+							<Comment><![CDATA[Input At Top ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to3.GreenLeft.LTU.LTU_Motor.bFuse</Name>
+							<Comment><![CDATA[Motor is Running]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to3.GreenLeft.LTU.LTU_Motor.bThermistor</Name>
+							<Comment><![CDATA[Motor is Ok]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to3.GreenLeft.BlueStopper.bStopperSensor</Name>
+							<Comment><![CDATA[Sensor checks if stopper is occupied]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to3.OrangeUpper.Motor.bFuse</Name>
+							<Comment><![CDATA[Motor is Running]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to3.OrangeUpper.Motor.bThermistor</Name>
+							<Comment><![CDATA[Motor is Ok]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to3.OrangeUpper.LTU.bLightBarrier</Name>
+							<Comment><![CDATA[ LTU light sensor ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to3.OrangeUpper.LTU.bAtBottom</Name>
+							<Comment><![CDATA[Input At Bottom ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to3.OrangeUpper.LTU.bAtMiddle</Name>
+							<Comment><![CDATA[Input At Middle	 ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to3.OrangeUpper.LTU.bAtTop</Name>
+							<Comment><![CDATA[Input At Top ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to3.OrangeUpper.LTU.LTU_Motor.bFuse</Name>
+							<Comment><![CDATA[Motor is Running]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to3.OrangeUpper.LTU.LTU_Motor.bThermistor</Name>
+							<Comment><![CDATA[Motor is Ok]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to3.OrangeUpper.BlueStopper.bStopperSensor</Name>
+							<Comment><![CDATA[Sensor checks if stopper is occupied]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to3.OrangeUpper.PurpleStopper_1.bStopperSensor</Name>
+							<Comment><![CDATA[Sensor checks if stopper is occupied]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to3.OrangeUpper.PurpleStopper_2.bStopperSensor</Name>
+							<Comment><![CDATA[Sensor checks if stopper is occupied]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to3.OrangeLower.Motor.bFuse</Name>
+							<Comment><![CDATA[Motor is Running]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to3.OrangeLower.Motor.bThermistor</Name>
+							<Comment><![CDATA[Motor is Ok]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to3.OrangeLower.LTU.bLightBarrier</Name>
+							<Comment><![CDATA[ LTU light sensor ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to3.OrangeLower.LTU.bAtBottom</Name>
+							<Comment><![CDATA[Input At Bottom ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to3.OrangeLower.LTU.bAtMiddle</Name>
+							<Comment><![CDATA[Input At Middle	 ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to3.OrangeLower.LTU.bAtTop</Name>
+							<Comment><![CDATA[Input At Top ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to3.OrangeLower.LTU.LTU_Motor.bFuse</Name>
+							<Comment><![CDATA[Motor is Running]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to3.OrangeLower.LTU.LTU_Motor.bThermistor</Name>
+							<Comment><![CDATA[Motor is Ok]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to3.OrangeLower.BlueStopper.bStopperSensor</Name>
+							<Comment><![CDATA[Sensor checks if stopper is occupied]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to3.OrangeLower.PurpleStopper_1.bStopperSensor</Name>
+							<Comment><![CDATA[Sensor checks if stopper is occupied]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to3.OrangeLower.PurpleStopper_2.bStopperSensor</Name>
+							<Comment><![CDATA[Sensor checks if stopper is occupied]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to6.GreenRight.Motor.bFuse</Name>
+							<Comment><![CDATA[Motor is Running]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to6.GreenRight.Motor.bThermistor</Name>
+							<Comment><![CDATA[Motor is Ok]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to6.GreenRight.LTU.bLightBarrier</Name>
+							<Comment><![CDATA[ LTU light sensor ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to6.GreenRight.LTU.bAtBottom</Name>
+							<Comment><![CDATA[Input At Bottom ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to6.GreenRight.LTU.bAtMiddle</Name>
+							<Comment><![CDATA[Input At Middle	 ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to6.GreenRight.LTU.bAtTop</Name>
+							<Comment><![CDATA[Input At Top ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to6.GreenRight.LTU.LTU_Motor.bFuse</Name>
+							<Comment><![CDATA[Motor is Running]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to6.GreenRight.LTU.LTU_Motor.bThermistor</Name>
+							<Comment><![CDATA[Motor is Ok]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to6.GreenRight.BlueStopper.bStopperSensor</Name>
+							<Comment><![CDATA[Sensor checks if stopper is occupied]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to6.GreenLeft.Motor.bFuse</Name>
+							<Comment><![CDATA[Motor is Running]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to6.GreenLeft.Motor.bThermistor</Name>
+							<Comment><![CDATA[Motor is Ok]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to6.GreenLeft.LTU.bLightBarrier</Name>
+							<Comment><![CDATA[ LTU light sensor ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to6.GreenLeft.LTU.bAtBottom</Name>
+							<Comment><![CDATA[Input At Bottom ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to6.GreenLeft.LTU.bAtMiddle</Name>
+							<Comment><![CDATA[Input At Middle	 ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to6.GreenLeft.LTU.bAtTop</Name>
+							<Comment><![CDATA[Input At Top ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to6.GreenLeft.LTU.LTU_Motor.bFuse</Name>
+							<Comment><![CDATA[Motor is Running]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to6.GreenLeft.LTU.LTU_Motor.bThermistor</Name>
+							<Comment><![CDATA[Motor is Ok]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to6.GreenLeft.BlueStopper.bStopperSensor</Name>
+							<Comment><![CDATA[Sensor checks if stopper is occupied]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to6.OrangeUpper.Motor.bFuse</Name>
+							<Comment><![CDATA[Motor is Running]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to6.OrangeUpper.Motor.bThermistor</Name>
+							<Comment><![CDATA[Motor is Ok]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to6.OrangeUpper.LTU.bLightBarrier</Name>
+							<Comment><![CDATA[ LTU light sensor ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to6.OrangeUpper.LTU.bAtBottom</Name>
+							<Comment><![CDATA[Input At Bottom ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to6.OrangeUpper.LTU.bAtMiddle</Name>
+							<Comment><![CDATA[Input At Middle	 ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to6.OrangeUpper.LTU.bAtTop</Name>
+							<Comment><![CDATA[Input At Top ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to6.OrangeUpper.LTU.LTU_Motor.bFuse</Name>
+							<Comment><![CDATA[Motor is Running]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to6.OrangeUpper.LTU.LTU_Motor.bThermistor</Name>
+							<Comment><![CDATA[Motor is Ok]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to6.OrangeUpper.BlueStopper.bStopperSensor</Name>
+							<Comment><![CDATA[Sensor checks if stopper is occupied]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to6.OrangeUpper.PurpleStopper_1.bStopperSensor</Name>
+							<Comment><![CDATA[Sensor checks if stopper is occupied]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to6.OrangeUpper.PurpleStopper_2.bStopperSensor</Name>
+							<Comment><![CDATA[Sensor checks if stopper is occupied]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to6.OrangeLower.Motor.bFuse</Name>
+							<Comment><![CDATA[Motor is Running]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to6.OrangeLower.Motor.bThermistor</Name>
+							<Comment><![CDATA[Motor is Ok]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to6.OrangeLower.LTU.bLightBarrier</Name>
+							<Comment><![CDATA[ LTU light sensor ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to6.OrangeLower.LTU.bAtBottom</Name>
+							<Comment><![CDATA[Input At Bottom ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to6.OrangeLower.LTU.bAtMiddle</Name>
+							<Comment><![CDATA[Input At Middle	 ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to6.OrangeLower.LTU.bAtTop</Name>
+							<Comment><![CDATA[Input At Top ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to6.OrangeLower.LTU.LTU_Motor.bFuse</Name>
+							<Comment><![CDATA[Motor is Running]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to6.OrangeLower.LTU.LTU_Motor.bThermistor</Name>
+							<Comment><![CDATA[Motor is Ok]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to6.OrangeLower.BlueStopper.bStopperSensor</Name>
+							<Comment><![CDATA[Sensor checks if stopper is occupied]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to6.OrangeLower.PurpleStopper_1.bStopperSensor</Name>
+							<Comment><![CDATA[Sensor checks if stopper is occupied]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to6.OrangeLower.PurpleStopper_2.bStopperSensor</Name>
+							<Comment><![CDATA[Sensor checks if stopper is occupied]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to12.GreenRight.Motor.bFuse</Name>
+							<Comment><![CDATA[Motor is Running]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to12.GreenRight.Motor.bThermistor</Name>
+							<Comment><![CDATA[Motor is Ok]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to12.GreenRight.LTU.bLightBarrier</Name>
+							<Comment><![CDATA[ LTU light sensor ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to12.GreenRight.LTU.bAtBottom</Name>
+							<Comment><![CDATA[Input At Bottom ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to12.GreenRight.LTU.bAtMiddle</Name>
+							<Comment><![CDATA[Input At Middle	 ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to12.GreenRight.LTU.bAtTop</Name>
+							<Comment><![CDATA[Input At Top ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to12.GreenRight.LTU.LTU_Motor.bFuse</Name>
+							<Comment><![CDATA[Motor is Running]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to12.GreenRight.LTU.LTU_Motor.bThermistor</Name>
+							<Comment><![CDATA[Motor is Ok]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to12.GreenRight.BlueStopper.bStopperSensor</Name>
+							<Comment><![CDATA[Sensor checks if stopper is occupied]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to12.GreenLeft.Motor.bFuse</Name>
+							<Comment><![CDATA[Motor is Running]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to12.GreenLeft.Motor.bThermistor</Name>
+							<Comment><![CDATA[Motor is Ok]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to12.GreenLeft.LTU.bLightBarrier</Name>
+							<Comment><![CDATA[ LTU light sensor ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to12.GreenLeft.LTU.bAtBottom</Name>
+							<Comment><![CDATA[Input At Bottom ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to12.GreenLeft.LTU.bAtMiddle</Name>
+							<Comment><![CDATA[Input At Middle	 ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to12.GreenLeft.LTU.bAtTop</Name>
+							<Comment><![CDATA[Input At Top ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to12.GreenLeft.LTU.LTU_Motor.bFuse</Name>
+							<Comment><![CDATA[Motor is Running]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to12.GreenLeft.LTU.LTU_Motor.bThermistor</Name>
+							<Comment><![CDATA[Motor is Ok]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to12.GreenLeft.BlueStopper.bStopperSensor</Name>
+							<Comment><![CDATA[Sensor checks if stopper is occupied]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to12.OrangeUpper.Motor.bFuse</Name>
+							<Comment><![CDATA[Motor is Running]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to12.OrangeUpper.Motor.bThermistor</Name>
+							<Comment><![CDATA[Motor is Ok]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to12.OrangeUpper.LTU.bLightBarrier</Name>
+							<Comment><![CDATA[ LTU light sensor ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to12.OrangeUpper.LTU.bAtBottom</Name>
+							<Comment><![CDATA[Input At Bottom ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to12.OrangeUpper.LTU.bAtMiddle</Name>
+							<Comment><![CDATA[Input At Middle	 ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to12.OrangeUpper.LTU.bAtTop</Name>
+							<Comment><![CDATA[Input At Top ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to12.OrangeUpper.LTU.LTU_Motor.bFuse</Name>
+							<Comment><![CDATA[Motor is Running]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to12.OrangeUpper.LTU.LTU_Motor.bThermistor</Name>
+							<Comment><![CDATA[Motor is Ok]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to12.OrangeUpper.BlueStopper.bStopperSensor</Name>
+							<Comment><![CDATA[Sensor checks if stopper is occupied]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to12.OrangeUpper.PurpleStopper_1.bStopperSensor</Name>
+							<Comment><![CDATA[Sensor checks if stopper is occupied]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to12.OrangeUpper.PurpleStopper_2.bStopperSensor</Name>
+							<Comment><![CDATA[Sensor checks if stopper is occupied]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to12.OrangeLower.Motor.bFuse</Name>
+							<Comment><![CDATA[Motor is Running]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to12.OrangeLower.Motor.bThermistor</Name>
+							<Comment><![CDATA[Motor is Ok]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to12.OrangeLower.LTU.bLightBarrier</Name>
+							<Comment><![CDATA[ LTU light sensor ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to12.OrangeLower.LTU.bAtBottom</Name>
+							<Comment><![CDATA[Input At Bottom ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to12.OrangeLower.LTU.bAtMiddle</Name>
+							<Comment><![CDATA[Input At Middle	 ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to12.OrangeLower.LTU.bAtTop</Name>
+							<Comment><![CDATA[Input At Top ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to12.OrangeLower.LTU.LTU_Motor.bFuse</Name>
+							<Comment><![CDATA[Motor is Running]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to12.OrangeLower.LTU.LTU_Motor.bThermistor</Name>
+							<Comment><![CDATA[Motor is Ok]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to12.OrangeLower.BlueStopper.bStopperSensor</Name>
+							<Comment><![CDATA[Sensor checks if stopper is occupied]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to12.OrangeLower.PurpleStopper_1.bStopperSensor</Name>
+							<Comment><![CDATA[Sensor checks if stopper is occupied]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to12.OrangeLower.PurpleStopper_2.bStopperSensor</Name>
+							<Comment><![CDATA[Sensor checks if stopper is occupied]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to6.GreenRight.Motor.bFuse</Name>
+							<Comment><![CDATA[Motor is Running]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to6.GreenRight.Motor.bThermistor</Name>
+							<Comment><![CDATA[Motor is Ok]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to6.GreenRight.LTU.bLightBarrier</Name>
+							<Comment><![CDATA[ LTU light sensor ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to6.GreenRight.LTU.bAtBottom</Name>
+							<Comment><![CDATA[Input At Bottom ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to6.GreenRight.LTU.bAtMiddle</Name>
+							<Comment><![CDATA[Input At Middle	 ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to6.GreenRight.LTU.bAtTop</Name>
+							<Comment><![CDATA[Input At Top ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to6.GreenRight.LTU.LTU_Motor.bFuse</Name>
+							<Comment><![CDATA[Motor is Running]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to6.GreenRight.LTU.LTU_Motor.bThermistor</Name>
+							<Comment><![CDATA[Motor is Ok]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to6.GreenRight.BlueStopper.bStopperSensor</Name>
+							<Comment><![CDATA[Sensor checks if stopper is occupied]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to6.GreenLeft.Motor.bFuse</Name>
+							<Comment><![CDATA[Motor is Running]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to6.GreenLeft.Motor.bThermistor</Name>
+							<Comment><![CDATA[Motor is Ok]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to6.GreenLeft.LTU.bLightBarrier</Name>
+							<Comment><![CDATA[ LTU light sensor ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to6.GreenLeft.LTU.bAtBottom</Name>
+							<Comment><![CDATA[Input At Bottom ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to6.GreenLeft.LTU.bAtMiddle</Name>
+							<Comment><![CDATA[Input At Middle	 ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to6.GreenLeft.LTU.bAtTop</Name>
+							<Comment><![CDATA[Input At Top ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to6.GreenLeft.LTU.LTU_Motor.bFuse</Name>
+							<Comment><![CDATA[Motor is Running]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to6.GreenLeft.LTU.LTU_Motor.bThermistor</Name>
+							<Comment><![CDATA[Motor is Ok]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to6.GreenLeft.BlueStopper.bStopperSensor</Name>
+							<Comment><![CDATA[Sensor checks if stopper is occupied]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to6.OrangeUpper.Motor.bFuse</Name>
+							<Comment><![CDATA[Motor is Running]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to6.OrangeUpper.Motor.bThermistor</Name>
+							<Comment><![CDATA[Motor is Ok]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to6.OrangeUpper.LTU.bLightBarrier</Name>
+							<Comment><![CDATA[ LTU light sensor ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to6.OrangeUpper.LTU.bAtBottom</Name>
+							<Comment><![CDATA[Input At Bottom ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to6.OrangeUpper.LTU.bAtMiddle</Name>
+							<Comment><![CDATA[Input At Middle	 ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to6.OrangeUpper.LTU.bAtTop</Name>
+							<Comment><![CDATA[Input At Top ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to6.OrangeUpper.LTU.LTU_Motor.bFuse</Name>
+							<Comment><![CDATA[Motor is Running]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to6.OrangeUpper.LTU.LTU_Motor.bThermistor</Name>
+							<Comment><![CDATA[Motor is Ok]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to6.OrangeUpper.BlueStopper.bStopperSensor</Name>
+							<Comment><![CDATA[Sensor checks if stopper is occupied]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to6.OrangeUpper.PurpleStopper_1.bStopperSensor</Name>
+							<Comment><![CDATA[Sensor checks if stopper is occupied]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to6.OrangeUpper.PurpleStopper_2.bStopperSensor</Name>
+							<Comment><![CDATA[Sensor checks if stopper is occupied]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to6.OrangeLower.Motor.bFuse</Name>
+							<Comment><![CDATA[Motor is Running]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to6.OrangeLower.Motor.bThermistor</Name>
+							<Comment><![CDATA[Motor is Ok]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to6.OrangeLower.LTU.bLightBarrier</Name>
+							<Comment><![CDATA[ LTU light sensor ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to6.OrangeLower.LTU.bAtBottom</Name>
+							<Comment><![CDATA[Input At Bottom ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to6.OrangeLower.LTU.bAtMiddle</Name>
+							<Comment><![CDATA[Input At Middle	 ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to6.OrangeLower.LTU.bAtTop</Name>
+							<Comment><![CDATA[Input At Top ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to6.OrangeLower.LTU.LTU_Motor.bFuse</Name>
+							<Comment><![CDATA[Motor is Running]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to6.OrangeLower.LTU.LTU_Motor.bThermistor</Name>
+							<Comment><![CDATA[Motor is Ok]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to6.OrangeLower.BlueStopper.bStopperSensor</Name>
+							<Comment><![CDATA[Sensor checks if stopper is occupied]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to6.OrangeLower.PurpleStopper_1.bStopperSensor</Name>
+							<Comment><![CDATA[Sensor checks if stopper is occupied]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to6.OrangeLower.PurpleStopper_2.bStopperSensor</Name>
+							<Comment><![CDATA[Sensor checks if stopper is occupied]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to9.GreenRight.Motor.bFuse</Name>
+							<Comment><![CDATA[Motor is Running]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to9.GreenRight.Motor.bThermistor</Name>
+							<Comment><![CDATA[Motor is Ok]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to9.GreenRight.LTU.bLightBarrier</Name>
+							<Comment><![CDATA[ LTU light sensor ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to9.GreenRight.LTU.bAtBottom</Name>
+							<Comment><![CDATA[Input At Bottom ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to9.GreenRight.LTU.bAtMiddle</Name>
+							<Comment><![CDATA[Input At Middle	 ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to9.GreenRight.LTU.bAtTop</Name>
+							<Comment><![CDATA[Input At Top ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to9.GreenRight.LTU.LTU_Motor.bFuse</Name>
+							<Comment><![CDATA[Motor is Running]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to9.GreenRight.LTU.LTU_Motor.bThermistor</Name>
+							<Comment><![CDATA[Motor is Ok]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to9.GreenRight.BlueStopper.bStopperSensor</Name>
+							<Comment><![CDATA[Sensor checks if stopper is occupied]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to9.GreenLeft.Motor.bFuse</Name>
+							<Comment><![CDATA[Motor is Running]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to9.GreenLeft.Motor.bThermistor</Name>
+							<Comment><![CDATA[Motor is Ok]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to9.GreenLeft.LTU.bLightBarrier</Name>
+							<Comment><![CDATA[ LTU light sensor ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to9.GreenLeft.LTU.bAtBottom</Name>
+							<Comment><![CDATA[Input At Bottom ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to9.GreenLeft.LTU.bAtMiddle</Name>
+							<Comment><![CDATA[Input At Middle	 ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to9.GreenLeft.LTU.bAtTop</Name>
+							<Comment><![CDATA[Input At Top ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to9.GreenLeft.LTU.LTU_Motor.bFuse</Name>
+							<Comment><![CDATA[Motor is Running]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to9.GreenLeft.LTU.LTU_Motor.bThermistor</Name>
+							<Comment><![CDATA[Motor is Ok]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to9.GreenLeft.BlueStopper.bStopperSensor</Name>
+							<Comment><![CDATA[Sensor checks if stopper is occupied]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to9.OrangeUpper.Motor.bFuse</Name>
+							<Comment><![CDATA[Motor is Running]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to9.OrangeUpper.Motor.bThermistor</Name>
+							<Comment><![CDATA[Motor is Ok]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to9.OrangeUpper.LTU.bLightBarrier</Name>
+							<Comment><![CDATA[ LTU light sensor ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to9.OrangeUpper.LTU.bAtBottom</Name>
+							<Comment><![CDATA[Input At Bottom ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to9.OrangeUpper.LTU.bAtMiddle</Name>
+							<Comment><![CDATA[Input At Middle	 ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to9.OrangeUpper.LTU.bAtTop</Name>
+							<Comment><![CDATA[Input At Top ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to9.OrangeUpper.LTU.LTU_Motor.bFuse</Name>
+							<Comment><![CDATA[Motor is Running]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to9.OrangeUpper.LTU.LTU_Motor.bThermistor</Name>
+							<Comment><![CDATA[Motor is Ok]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to9.OrangeUpper.BlueStopper.bStopperSensor</Name>
+							<Comment><![CDATA[Sensor checks if stopper is occupied]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to9.OrangeUpper.PurpleStopper_1.bStopperSensor</Name>
+							<Comment><![CDATA[Sensor checks if stopper is occupied]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to9.OrangeUpper.PurpleStopper_2.bStopperSensor</Name>
+							<Comment><![CDATA[Sensor checks if stopper is occupied]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to9.OrangeLower.Motor.bFuse</Name>
+							<Comment><![CDATA[Motor is Running]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to9.OrangeLower.Motor.bThermistor</Name>
+							<Comment><![CDATA[Motor is Ok]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to9.OrangeLower.LTU.bLightBarrier</Name>
+							<Comment><![CDATA[ LTU light sensor ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to9.OrangeLower.LTU.bAtBottom</Name>
+							<Comment><![CDATA[Input At Bottom ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to9.OrangeLower.LTU.bAtMiddle</Name>
+							<Comment><![CDATA[Input At Middle	 ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to9.OrangeLower.LTU.bAtTop</Name>
+							<Comment><![CDATA[Input At Top ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to9.OrangeLower.LTU.LTU_Motor.bFuse</Name>
+							<Comment><![CDATA[Motor is Running]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to9.OrangeLower.LTU.LTU_Motor.bThermistor</Name>
+							<Comment><![CDATA[Motor is Ok]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to9.OrangeLower.BlueStopper.bStopperSensor</Name>
+							<Comment><![CDATA[Sensor checks if stopper is occupied]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to9.OrangeLower.PurpleStopper_1.bStopperSensor</Name>
+							<Comment><![CDATA[Sensor checks if stopper is occupied]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to9.OrangeLower.PurpleStopper_2.bStopperSensor</Name>
+							<Comment><![CDATA[Sensor checks if stopper is occupied]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to12.GreenRight.Motor.bFuse</Name>
+							<Comment><![CDATA[Motor is Running]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to12.GreenRight.Motor.bThermistor</Name>
+							<Comment><![CDATA[Motor is Ok]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to12.GreenRight.LTU.bLightBarrier</Name>
+							<Comment><![CDATA[ LTU light sensor ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to12.GreenRight.LTU.bAtBottom</Name>
+							<Comment><![CDATA[Input At Bottom ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to12.GreenRight.LTU.bAtMiddle</Name>
+							<Comment><![CDATA[Input At Middle	 ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to12.GreenRight.LTU.bAtTop</Name>
+							<Comment><![CDATA[Input At Top ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to12.GreenRight.LTU.LTU_Motor.bFuse</Name>
+							<Comment><![CDATA[Motor is Running]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to12.GreenRight.LTU.LTU_Motor.bThermistor</Name>
+							<Comment><![CDATA[Motor is Ok]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to12.GreenRight.BlueStopper.bStopperSensor</Name>
+							<Comment><![CDATA[Sensor checks if stopper is occupied]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to12.GreenLeft.Motor.bFuse</Name>
+							<Comment><![CDATA[Motor is Running]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to12.GreenLeft.Motor.bThermistor</Name>
+							<Comment><![CDATA[Motor is Ok]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to12.GreenLeft.LTU.bLightBarrier</Name>
+							<Comment><![CDATA[ LTU light sensor ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to12.GreenLeft.LTU.bAtBottom</Name>
+							<Comment><![CDATA[Input At Bottom ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to12.GreenLeft.LTU.bAtMiddle</Name>
+							<Comment><![CDATA[Input At Middle	 ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to12.GreenLeft.LTU.bAtTop</Name>
+							<Comment><![CDATA[Input At Top ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to12.GreenLeft.LTU.LTU_Motor.bFuse</Name>
+							<Comment><![CDATA[Motor is Running]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to12.GreenLeft.LTU.LTU_Motor.bThermistor</Name>
+							<Comment><![CDATA[Motor is Ok]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to12.GreenLeft.BlueStopper.bStopperSensor</Name>
+							<Comment><![CDATA[Sensor checks if stopper is occupied]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to12.OrangeUpper.Motor.bFuse</Name>
+							<Comment><![CDATA[Motor is Running]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to12.OrangeUpper.Motor.bThermistor</Name>
+							<Comment><![CDATA[Motor is Ok]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to12.OrangeUpper.LTU.bLightBarrier</Name>
+							<Comment><![CDATA[ LTU light sensor ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to12.OrangeUpper.LTU.bAtBottom</Name>
+							<Comment><![CDATA[Input At Bottom ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to12.OrangeUpper.LTU.bAtMiddle</Name>
+							<Comment><![CDATA[Input At Middle	 ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to12.OrangeUpper.LTU.bAtTop</Name>
+							<Comment><![CDATA[Input At Top ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to12.OrangeUpper.LTU.LTU_Motor.bFuse</Name>
+							<Comment><![CDATA[Motor is Running]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to12.OrangeUpper.LTU.LTU_Motor.bThermistor</Name>
+							<Comment><![CDATA[Motor is Ok]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to12.OrangeUpper.BlueStopper.bStopperSensor</Name>
+							<Comment><![CDATA[Sensor checks if stopper is occupied]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to12.OrangeUpper.PurpleStopper_1.bStopperSensor</Name>
+							<Comment><![CDATA[Sensor checks if stopper is occupied]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to12.OrangeUpper.PurpleStopper_2.bStopperSensor</Name>
+							<Comment><![CDATA[Sensor checks if stopper is occupied]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to12.OrangeLower.Motor.bFuse</Name>
+							<Comment><![CDATA[Motor is Running]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to12.OrangeLower.Motor.bThermistor</Name>
+							<Comment><![CDATA[Motor is Ok]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to12.OrangeLower.LTU.bLightBarrier</Name>
+							<Comment><![CDATA[ LTU light sensor ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to12.OrangeLower.LTU.bAtBottom</Name>
+							<Comment><![CDATA[Input At Bottom ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to12.OrangeLower.LTU.bAtMiddle</Name>
+							<Comment><![CDATA[Input At Middle	 ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to12.OrangeLower.LTU.bAtTop</Name>
+							<Comment><![CDATA[Input At Top ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to12.OrangeLower.LTU.LTU_Motor.bFuse</Name>
+							<Comment><![CDATA[Motor is Running]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to12.OrangeLower.LTU.LTU_Motor.bThermistor</Name>
+							<Comment><![CDATA[Motor is Ok]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to12.OrangeLower.BlueStopper.bStopperSensor</Name>
+							<Comment><![CDATA[Sensor checks if stopper is occupied]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to12.OrangeLower.PurpleStopper_1.bStopperSensor</Name>
+							<Comment><![CDATA[Sensor checks if stopper is occupied]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to12.OrangeLower.PurpleStopper_2.bStopperSensor</Name>
+							<Comment><![CDATA[Sensor checks if stopper is occupied]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to3.GreenRight.Motor.bFuse</Name>
+							<Comment><![CDATA[Motor is Running]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to3.GreenRight.Motor.bThermistor</Name>
+							<Comment><![CDATA[Motor is Ok]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to3.GreenRight.LTU.bLightBarrier</Name>
+							<Comment><![CDATA[ LTU light sensor ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to3.GreenRight.LTU.bAtBottom</Name>
+							<Comment><![CDATA[Input At Bottom ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to3.GreenRight.LTU.bAtMiddle</Name>
+							<Comment><![CDATA[Input At Middle	 ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to3.GreenRight.LTU.bAtTop</Name>
+							<Comment><![CDATA[Input At Top ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to3.GreenRight.LTU.LTU_Motor.bFuse</Name>
+							<Comment><![CDATA[Motor is Running]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to3.GreenRight.LTU.LTU_Motor.bThermistor</Name>
+							<Comment><![CDATA[Motor is Ok]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to3.GreenRight.BlueStopper.bStopperSensor</Name>
+							<Comment><![CDATA[Sensor checks if stopper is occupied]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to3.GreenLeft.Motor.bFuse</Name>
+							<Comment><![CDATA[Motor is Running]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to3.GreenLeft.Motor.bThermistor</Name>
+							<Comment><![CDATA[Motor is Ok]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to3.GreenLeft.LTU.bLightBarrier</Name>
+							<Comment><![CDATA[ LTU light sensor ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to3.GreenLeft.LTU.bAtBottom</Name>
+							<Comment><![CDATA[Input At Bottom ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to3.GreenLeft.LTU.bAtMiddle</Name>
+							<Comment><![CDATA[Input At Middle	 ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to3.GreenLeft.LTU.bAtTop</Name>
+							<Comment><![CDATA[Input At Top ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to3.GreenLeft.LTU.LTU_Motor.bFuse</Name>
+							<Comment><![CDATA[Motor is Running]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to3.GreenLeft.LTU.LTU_Motor.bThermistor</Name>
+							<Comment><![CDATA[Motor is Ok]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to3.GreenLeft.BlueStopper.bStopperSensor</Name>
+							<Comment><![CDATA[Sensor checks if stopper is occupied]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to3.OrangeUpper.Motor.bFuse</Name>
+							<Comment><![CDATA[Motor is Running]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to3.OrangeUpper.Motor.bThermistor</Name>
+							<Comment><![CDATA[Motor is Ok]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to3.OrangeUpper.LTU.bLightBarrier</Name>
+							<Comment><![CDATA[ LTU light sensor ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to3.OrangeUpper.LTU.bAtBottom</Name>
+							<Comment><![CDATA[Input At Bottom ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to3.OrangeUpper.LTU.bAtMiddle</Name>
+							<Comment><![CDATA[Input At Middle	 ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to3.OrangeUpper.LTU.bAtTop</Name>
+							<Comment><![CDATA[Input At Top ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to3.OrangeUpper.LTU.LTU_Motor.bFuse</Name>
+							<Comment><![CDATA[Motor is Running]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to3.OrangeUpper.LTU.LTU_Motor.bThermistor</Name>
+							<Comment><![CDATA[Motor is Ok]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to3.OrangeUpper.BlueStopper.bStopperSensor</Name>
+							<Comment><![CDATA[Sensor checks if stopper is occupied]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to3.OrangeUpper.PurpleStopper_1.bStopperSensor</Name>
+							<Comment><![CDATA[Sensor checks if stopper is occupied]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to3.OrangeUpper.PurpleStopper_2.bStopperSensor</Name>
+							<Comment><![CDATA[Sensor checks if stopper is occupied]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to3.OrangeLower.Motor.bFuse</Name>
+							<Comment><![CDATA[Motor is Running]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to3.OrangeLower.Motor.bThermistor</Name>
+							<Comment><![CDATA[Motor is Ok]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to3.OrangeLower.LTU.bLightBarrier</Name>
+							<Comment><![CDATA[ LTU light sensor ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to3.OrangeLower.LTU.bAtBottom</Name>
+							<Comment><![CDATA[Input At Bottom ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to3.OrangeLower.LTU.bAtMiddle</Name>
+							<Comment><![CDATA[Input At Middle	 ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to3.OrangeLower.LTU.bAtTop</Name>
+							<Comment><![CDATA[Input At Top ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to3.OrangeLower.LTU.LTU_Motor.bFuse</Name>
+							<Comment><![CDATA[Motor is Running]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to3.OrangeLower.LTU.LTU_Motor.bThermistor</Name>
+							<Comment><![CDATA[Motor is Ok]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to3.OrangeLower.BlueStopper.bStopperSensor</Name>
+							<Comment><![CDATA[Sensor checks if stopper is occupied]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to3.OrangeLower.PurpleStopper_1.bStopperSensor</Name>
+							<Comment><![CDATA[Sensor checks if stopper is occupied]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to3.OrangeLower.PurpleStopper_2.bStopperSensor</Name>
+							<Comment><![CDATA[Sensor checks if stopper is occupied]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to9.GreenRight.Motor.bFuse</Name>
+							<Comment><![CDATA[Motor is Running]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to9.GreenRight.Motor.bThermistor</Name>
+							<Comment><![CDATA[Motor is Ok]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to9.GreenRight.LTU.bLightBarrier</Name>
+							<Comment><![CDATA[ LTU light sensor ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to9.GreenRight.LTU.bAtBottom</Name>
+							<Comment><![CDATA[Input At Bottom ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to9.GreenRight.LTU.bAtMiddle</Name>
+							<Comment><![CDATA[Input At Middle	 ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to9.GreenRight.LTU.bAtTop</Name>
+							<Comment><![CDATA[Input At Top ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to9.GreenRight.LTU.LTU_Motor.bFuse</Name>
+							<Comment><![CDATA[Motor is Running]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to9.GreenRight.LTU.LTU_Motor.bThermistor</Name>
+							<Comment><![CDATA[Motor is Ok]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to9.GreenRight.BlueStopper.bStopperSensor</Name>
+							<Comment><![CDATA[Sensor checks if stopper is occupied]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to9.GreenLeft.Motor.bFuse</Name>
+							<Comment><![CDATA[Motor is Running]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to9.GreenLeft.Motor.bThermistor</Name>
+							<Comment><![CDATA[Motor is Ok]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to9.GreenLeft.LTU.bLightBarrier</Name>
+							<Comment><![CDATA[ LTU light sensor ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to9.GreenLeft.LTU.bAtBottom</Name>
+							<Comment><![CDATA[Input At Bottom ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to9.GreenLeft.LTU.bAtMiddle</Name>
+							<Comment><![CDATA[Input At Middle	 ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to9.GreenLeft.LTU.bAtTop</Name>
+							<Comment><![CDATA[Input At Top ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to9.GreenLeft.LTU.LTU_Motor.bFuse</Name>
+							<Comment><![CDATA[Motor is Running]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to9.GreenLeft.LTU.LTU_Motor.bThermistor</Name>
+							<Comment><![CDATA[Motor is Ok]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to9.GreenLeft.BlueStopper.bStopperSensor</Name>
+							<Comment><![CDATA[Sensor checks if stopper is occupied]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to9.OrangeUpper.Motor.bFuse</Name>
+							<Comment><![CDATA[Motor is Running]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to9.OrangeUpper.Motor.bThermistor</Name>
+							<Comment><![CDATA[Motor is Ok]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to9.OrangeUpper.LTU.bLightBarrier</Name>
+							<Comment><![CDATA[ LTU light sensor ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to9.OrangeUpper.LTU.bAtBottom</Name>
+							<Comment><![CDATA[Input At Bottom ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to9.OrangeUpper.LTU.bAtMiddle</Name>
+							<Comment><![CDATA[Input At Middle	 ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to9.OrangeUpper.LTU.bAtTop</Name>
+							<Comment><![CDATA[Input At Top ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to9.OrangeUpper.LTU.LTU_Motor.bFuse</Name>
+							<Comment><![CDATA[Motor is Running]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to9.OrangeUpper.LTU.LTU_Motor.bThermistor</Name>
+							<Comment><![CDATA[Motor is Ok]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to9.OrangeUpper.BlueStopper.bStopperSensor</Name>
+							<Comment><![CDATA[Sensor checks if stopper is occupied]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to9.OrangeUpper.PurpleStopper_1.bStopperSensor</Name>
+							<Comment><![CDATA[Sensor checks if stopper is occupied]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to9.OrangeUpper.PurpleStopper_2.bStopperSensor</Name>
+							<Comment><![CDATA[Sensor checks if stopper is occupied]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to9.OrangeLower.Motor.bFuse</Name>
+							<Comment><![CDATA[Motor is Running]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to9.OrangeLower.Motor.bThermistor</Name>
+							<Comment><![CDATA[Motor is Ok]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to9.OrangeLower.LTU.bLightBarrier</Name>
+							<Comment><![CDATA[ LTU light sensor ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to9.OrangeLower.LTU.bAtBottom</Name>
+							<Comment><![CDATA[Input At Bottom ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to9.OrangeLower.LTU.bAtMiddle</Name>
+							<Comment><![CDATA[Input At Middle	 ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to9.OrangeLower.LTU.bAtTop</Name>
+							<Comment><![CDATA[Input At Top ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to9.OrangeLower.LTU.LTU_Motor.bFuse</Name>
+							<Comment><![CDATA[Motor is Running]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to9.OrangeLower.LTU.LTU_Motor.bThermistor</Name>
+							<Comment><![CDATA[Motor is Ok]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to9.OrangeLower.BlueStopper.bStopperSensor</Name>
+							<Comment><![CDATA[Sensor checks if stopper is occupied]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to9.OrangeLower.PurpleStopper_1.bStopperSensor</Name>
+							<Comment><![CDATA[Sensor checks if stopper is occupied]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to9.OrangeLower.PurpleStopper_2.bStopperSensor</Name>
+							<Comment><![CDATA[Sensor checks if stopper is occupied]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to12.GreenRight.Motor.bFuse</Name>
+							<Comment><![CDATA[Motor is Running]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to12.GreenRight.Motor.bThermistor</Name>
+							<Comment><![CDATA[Motor is Ok]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to12.GreenRight.LTU.bLightBarrier</Name>
+							<Comment><![CDATA[ LTU light sensor ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to12.GreenRight.LTU.bAtBottom</Name>
+							<Comment><![CDATA[Input At Bottom ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to12.GreenRight.LTU.bAtMiddle</Name>
+							<Comment><![CDATA[Input At Middle	 ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to12.GreenRight.LTU.bAtTop</Name>
+							<Comment><![CDATA[Input At Top ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to12.GreenRight.LTU.LTU_Motor.bFuse</Name>
+							<Comment><![CDATA[Motor is Running]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to12.GreenRight.LTU.LTU_Motor.bThermistor</Name>
+							<Comment><![CDATA[Motor is Ok]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to12.GreenRight.BlueStopper.bStopperSensor</Name>
+							<Comment><![CDATA[Sensor checks if stopper is occupied]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to12.GreenLeft.Motor.bFuse</Name>
+							<Comment><![CDATA[Motor is Running]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to12.GreenLeft.Motor.bThermistor</Name>
+							<Comment><![CDATA[Motor is Ok]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to12.GreenLeft.LTU.bLightBarrier</Name>
+							<Comment><![CDATA[ LTU light sensor ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to12.GreenLeft.LTU.bAtBottom</Name>
+							<Comment><![CDATA[Input At Bottom ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to12.GreenLeft.LTU.bAtMiddle</Name>
+							<Comment><![CDATA[Input At Middle	 ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to12.GreenLeft.LTU.bAtTop</Name>
+							<Comment><![CDATA[Input At Top ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to12.GreenLeft.LTU.LTU_Motor.bFuse</Name>
+							<Comment><![CDATA[Motor is Running]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to12.GreenLeft.LTU.LTU_Motor.bThermistor</Name>
+							<Comment><![CDATA[Motor is Ok]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to12.GreenLeft.BlueStopper.bStopperSensor</Name>
+							<Comment><![CDATA[Sensor checks if stopper is occupied]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to12.OrangeUpper.Motor.bFuse</Name>
+							<Comment><![CDATA[Motor is Running]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to12.OrangeUpper.Motor.bThermistor</Name>
+							<Comment><![CDATA[Motor is Ok]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to12.OrangeUpper.LTU.bLightBarrier</Name>
+							<Comment><![CDATA[ LTU light sensor ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to12.OrangeUpper.LTU.bAtBottom</Name>
+							<Comment><![CDATA[Input At Bottom ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to12.OrangeUpper.LTU.bAtMiddle</Name>
+							<Comment><![CDATA[Input At Middle	 ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to12.OrangeUpper.LTU.bAtTop</Name>
+							<Comment><![CDATA[Input At Top ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to12.OrangeUpper.LTU.LTU_Motor.bFuse</Name>
+							<Comment><![CDATA[Motor is Running]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to12.OrangeUpper.LTU.LTU_Motor.bThermistor</Name>
+							<Comment><![CDATA[Motor is Ok]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to12.OrangeUpper.BlueStopper.bStopperSensor</Name>
+							<Comment><![CDATA[Sensor checks if stopper is occupied]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to12.OrangeUpper.PurpleStopper_1.bStopperSensor</Name>
+							<Comment><![CDATA[Sensor checks if stopper is occupied]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to12.OrangeUpper.PurpleStopper_2.bStopperSensor</Name>
+							<Comment><![CDATA[Sensor checks if stopper is occupied]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to12.OrangeLower.Motor.bFuse</Name>
+							<Comment><![CDATA[Motor is Running]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to12.OrangeLower.Motor.bThermistor</Name>
+							<Comment><![CDATA[Motor is Ok]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to12.OrangeLower.LTU.bLightBarrier</Name>
+							<Comment><![CDATA[ LTU light sensor ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to12.OrangeLower.LTU.bAtBottom</Name>
+							<Comment><![CDATA[Input At Bottom ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to12.OrangeLower.LTU.bAtMiddle</Name>
+							<Comment><![CDATA[Input At Middle	 ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to12.OrangeLower.LTU.bAtTop</Name>
+							<Comment><![CDATA[Input At Top ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to12.OrangeLower.LTU.LTU_Motor.bFuse</Name>
+							<Comment><![CDATA[Motor is Running]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to12.OrangeLower.LTU.LTU_Motor.bThermistor</Name>
+							<Comment><![CDATA[Motor is Ok]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to12.OrangeLower.BlueStopper.bStopperSensor</Name>
+							<Comment><![CDATA[Sensor checks if stopper is occupied]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to12.OrangeLower.PurpleStopper_1.bStopperSensor</Name>
+							<Comment><![CDATA[Sensor checks if stopper is occupied]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to12.OrangeLower.PurpleStopper_2.bStopperSensor</Name>
+							<Comment><![CDATA[Sensor checks if stopper is occupied]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to3.GreenRight.Motor.bFuse</Name>
+							<Comment><![CDATA[Motor is Running]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to3.GreenRight.Motor.bThermistor</Name>
+							<Comment><![CDATA[Motor is Ok]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to3.GreenRight.LTU.bLightBarrier</Name>
+							<Comment><![CDATA[ LTU light sensor ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to3.GreenRight.LTU.bAtBottom</Name>
+							<Comment><![CDATA[Input At Bottom ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to3.GreenRight.LTU.bAtMiddle</Name>
+							<Comment><![CDATA[Input At Middle	 ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to3.GreenRight.LTU.bAtTop</Name>
+							<Comment><![CDATA[Input At Top ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to3.GreenRight.LTU.LTU_Motor.bFuse</Name>
+							<Comment><![CDATA[Motor is Running]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to3.GreenRight.LTU.LTU_Motor.bThermistor</Name>
+							<Comment><![CDATA[Motor is Ok]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to3.GreenRight.BlueStopper.bStopperSensor</Name>
+							<Comment><![CDATA[Sensor checks if stopper is occupied]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to3.GreenLeft.Motor.bFuse</Name>
+							<Comment><![CDATA[Motor is Running]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to3.GreenLeft.Motor.bThermistor</Name>
+							<Comment><![CDATA[Motor is Ok]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to3.GreenLeft.LTU.bLightBarrier</Name>
+							<Comment><![CDATA[ LTU light sensor ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to3.GreenLeft.LTU.bAtBottom</Name>
+							<Comment><![CDATA[Input At Bottom ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to3.GreenLeft.LTU.bAtMiddle</Name>
+							<Comment><![CDATA[Input At Middle	 ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to3.GreenLeft.LTU.bAtTop</Name>
+							<Comment><![CDATA[Input At Top ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to3.GreenLeft.LTU.LTU_Motor.bFuse</Name>
+							<Comment><![CDATA[Motor is Running]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to3.GreenLeft.LTU.LTU_Motor.bThermistor</Name>
+							<Comment><![CDATA[Motor is Ok]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to3.GreenLeft.BlueStopper.bStopperSensor</Name>
+							<Comment><![CDATA[Sensor checks if stopper is occupied]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to3.OrangeUpper.Motor.bFuse</Name>
+							<Comment><![CDATA[Motor is Running]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to3.OrangeUpper.Motor.bThermistor</Name>
+							<Comment><![CDATA[Motor is Ok]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to3.OrangeUpper.LTU.bLightBarrier</Name>
+							<Comment><![CDATA[ LTU light sensor ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to3.OrangeUpper.LTU.bAtBottom</Name>
+							<Comment><![CDATA[Input At Bottom ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to3.OrangeUpper.LTU.bAtMiddle</Name>
+							<Comment><![CDATA[Input At Middle	 ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to3.OrangeUpper.LTU.bAtTop</Name>
+							<Comment><![CDATA[Input At Top ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to3.OrangeUpper.LTU.LTU_Motor.bFuse</Name>
+							<Comment><![CDATA[Motor is Running]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to3.OrangeUpper.LTU.LTU_Motor.bThermistor</Name>
+							<Comment><![CDATA[Motor is Ok]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to3.OrangeUpper.BlueStopper.bStopperSensor</Name>
+							<Comment><![CDATA[Sensor checks if stopper is occupied]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to3.OrangeUpper.PurpleStopper_1.bStopperSensor</Name>
+							<Comment><![CDATA[Sensor checks if stopper is occupied]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to3.OrangeUpper.PurpleStopper_2.bStopperSensor</Name>
+							<Comment><![CDATA[Sensor checks if stopper is occupied]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to3.OrangeLower.Motor.bFuse</Name>
+							<Comment><![CDATA[Motor is Running]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to3.OrangeLower.Motor.bThermistor</Name>
+							<Comment><![CDATA[Motor is Ok]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to3.OrangeLower.LTU.bLightBarrier</Name>
+							<Comment><![CDATA[ LTU light sensor ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to3.OrangeLower.LTU.bAtBottom</Name>
+							<Comment><![CDATA[Input At Bottom ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to3.OrangeLower.LTU.bAtMiddle</Name>
+							<Comment><![CDATA[Input At Middle	 ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to3.OrangeLower.LTU.bAtTop</Name>
+							<Comment><![CDATA[Input At Top ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to3.OrangeLower.LTU.LTU_Motor.bFuse</Name>
+							<Comment><![CDATA[Motor is Running]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to3.OrangeLower.LTU.LTU_Motor.bThermistor</Name>
+							<Comment><![CDATA[Motor is Ok]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to3.OrangeLower.BlueStopper.bStopperSensor</Name>
+							<Comment><![CDATA[Sensor checks if stopper is occupied]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to3.OrangeLower.PurpleStopper_1.bStopperSensor</Name>
+							<Comment><![CDATA[Sensor checks if stopper is occupied]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to3.OrangeLower.PurpleStopper_2.bStopperSensor</Name>
+							<Comment><![CDATA[Sensor checks if stopper is occupied]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to6.GreenRight.Motor.bFuse</Name>
+							<Comment><![CDATA[Motor is Running]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to6.GreenRight.Motor.bThermistor</Name>
+							<Comment><![CDATA[Motor is Ok]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to6.GreenRight.LTU.bLightBarrier</Name>
+							<Comment><![CDATA[ LTU light sensor ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to6.GreenRight.LTU.bAtBottom</Name>
+							<Comment><![CDATA[Input At Bottom ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to6.GreenRight.LTU.bAtMiddle</Name>
+							<Comment><![CDATA[Input At Middle	 ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to6.GreenRight.LTU.bAtTop</Name>
+							<Comment><![CDATA[Input At Top ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to6.GreenRight.LTU.LTU_Motor.bFuse</Name>
+							<Comment><![CDATA[Motor is Running]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to6.GreenRight.LTU.LTU_Motor.bThermistor</Name>
+							<Comment><![CDATA[Motor is Ok]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to6.GreenRight.BlueStopper.bStopperSensor</Name>
+							<Comment><![CDATA[Sensor checks if stopper is occupied]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to6.GreenLeft.Motor.bFuse</Name>
+							<Comment><![CDATA[Motor is Running]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to6.GreenLeft.Motor.bThermistor</Name>
+							<Comment><![CDATA[Motor is Ok]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to6.GreenLeft.LTU.bLightBarrier</Name>
+							<Comment><![CDATA[ LTU light sensor ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to6.GreenLeft.LTU.bAtBottom</Name>
+							<Comment><![CDATA[Input At Bottom ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to6.GreenLeft.LTU.bAtMiddle</Name>
+							<Comment><![CDATA[Input At Middle	 ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to6.GreenLeft.LTU.bAtTop</Name>
+							<Comment><![CDATA[Input At Top ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to6.GreenLeft.LTU.LTU_Motor.bFuse</Name>
+							<Comment><![CDATA[Motor is Running]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to6.GreenLeft.LTU.LTU_Motor.bThermistor</Name>
+							<Comment><![CDATA[Motor is Ok]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to6.GreenLeft.BlueStopper.bStopperSensor</Name>
+							<Comment><![CDATA[Sensor checks if stopper is occupied]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to6.OrangeUpper.Motor.bFuse</Name>
+							<Comment><![CDATA[Motor is Running]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to6.OrangeUpper.Motor.bThermistor</Name>
+							<Comment><![CDATA[Motor is Ok]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to6.OrangeUpper.LTU.bLightBarrier</Name>
+							<Comment><![CDATA[ LTU light sensor ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to6.OrangeUpper.LTU.bAtBottom</Name>
+							<Comment><![CDATA[Input At Bottom ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to6.OrangeUpper.LTU.bAtMiddle</Name>
+							<Comment><![CDATA[Input At Middle	 ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to6.OrangeUpper.LTU.bAtTop</Name>
+							<Comment><![CDATA[Input At Top ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to6.OrangeUpper.LTU.LTU_Motor.bFuse</Name>
+							<Comment><![CDATA[Motor is Running]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to6.OrangeUpper.LTU.LTU_Motor.bThermistor</Name>
+							<Comment><![CDATA[Motor is Ok]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to6.OrangeUpper.BlueStopper.bStopperSensor</Name>
+							<Comment><![CDATA[Sensor checks if stopper is occupied]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to6.OrangeUpper.PurpleStopper_1.bStopperSensor</Name>
+							<Comment><![CDATA[Sensor checks if stopper is occupied]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to6.OrangeUpper.PurpleStopper_2.bStopperSensor</Name>
+							<Comment><![CDATA[Sensor checks if stopper is occupied]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to6.OrangeLower.Motor.bFuse</Name>
+							<Comment><![CDATA[Motor is Running]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to6.OrangeLower.Motor.bThermistor</Name>
+							<Comment><![CDATA[Motor is Ok]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to6.OrangeLower.LTU.bLightBarrier</Name>
+							<Comment><![CDATA[ LTU light sensor ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to6.OrangeLower.LTU.bAtBottom</Name>
+							<Comment><![CDATA[Input At Bottom ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to6.OrangeLower.LTU.bAtMiddle</Name>
+							<Comment><![CDATA[Input At Middle	 ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to6.OrangeLower.LTU.bAtTop</Name>
+							<Comment><![CDATA[Input At Top ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to6.OrangeLower.LTU.LTU_Motor.bFuse</Name>
+							<Comment><![CDATA[Motor is Running]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to6.OrangeLower.LTU.LTU_Motor.bThermistor</Name>
+							<Comment><![CDATA[Motor is Ok]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to6.OrangeLower.BlueStopper.bStopperSensor</Name>
+							<Comment><![CDATA[Sensor checks if stopper is occupied]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to6.OrangeLower.PurpleStopper_1.bStopperSensor</Name>
+							<Comment><![CDATA[Sensor checks if stopper is occupied]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to6.OrangeLower.PurpleStopper_2.bStopperSensor</Name>
+							<Comment><![CDATA[Sensor checks if stopper is occupied]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to9.GreenRight.Motor.bFuse</Name>
+							<Comment><![CDATA[Motor is Running]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to9.GreenRight.Motor.bThermistor</Name>
+							<Comment><![CDATA[Motor is Ok]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to9.GreenRight.LTU.bLightBarrier</Name>
+							<Comment><![CDATA[ LTU light sensor ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to9.GreenRight.LTU.bAtBottom</Name>
+							<Comment><![CDATA[Input At Bottom ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to9.GreenRight.LTU.bAtMiddle</Name>
+							<Comment><![CDATA[Input At Middle	 ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to9.GreenRight.LTU.bAtTop</Name>
+							<Comment><![CDATA[Input At Top ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to9.GreenRight.LTU.LTU_Motor.bFuse</Name>
+							<Comment><![CDATA[Motor is Running]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to9.GreenRight.LTU.LTU_Motor.bThermistor</Name>
+							<Comment><![CDATA[Motor is Ok]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to9.GreenRight.BlueStopper.bStopperSensor</Name>
+							<Comment><![CDATA[Sensor checks if stopper is occupied]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to9.GreenLeft.Motor.bFuse</Name>
+							<Comment><![CDATA[Motor is Running]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to9.GreenLeft.Motor.bThermistor</Name>
+							<Comment><![CDATA[Motor is Ok]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to9.GreenLeft.LTU.bLightBarrier</Name>
+							<Comment><![CDATA[ LTU light sensor ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to9.GreenLeft.LTU.bAtBottom</Name>
+							<Comment><![CDATA[Input At Bottom ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to9.GreenLeft.LTU.bAtMiddle</Name>
+							<Comment><![CDATA[Input At Middle	 ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to9.GreenLeft.LTU.bAtTop</Name>
+							<Comment><![CDATA[Input At Top ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to9.GreenLeft.LTU.LTU_Motor.bFuse</Name>
+							<Comment><![CDATA[Motor is Running]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to9.GreenLeft.LTU.LTU_Motor.bThermistor</Name>
+							<Comment><![CDATA[Motor is Ok]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to9.GreenLeft.BlueStopper.bStopperSensor</Name>
+							<Comment><![CDATA[Sensor checks if stopper is occupied]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to9.OrangeUpper.Motor.bFuse</Name>
+							<Comment><![CDATA[Motor is Running]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to9.OrangeUpper.Motor.bThermistor</Name>
+							<Comment><![CDATA[Motor is Ok]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to9.OrangeUpper.LTU.bLightBarrier</Name>
+							<Comment><![CDATA[ LTU light sensor ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to9.OrangeUpper.LTU.bAtBottom</Name>
+							<Comment><![CDATA[Input At Bottom ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to9.OrangeUpper.LTU.bAtMiddle</Name>
+							<Comment><![CDATA[Input At Middle	 ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to9.OrangeUpper.LTU.bAtTop</Name>
+							<Comment><![CDATA[Input At Top ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to9.OrangeUpper.LTU.LTU_Motor.bFuse</Name>
+							<Comment><![CDATA[Motor is Running]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to9.OrangeUpper.LTU.LTU_Motor.bThermistor</Name>
+							<Comment><![CDATA[Motor is Ok]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to9.OrangeUpper.BlueStopper.bStopperSensor</Name>
+							<Comment><![CDATA[Sensor checks if stopper is occupied]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to9.OrangeUpper.PurpleStopper_1.bStopperSensor</Name>
+							<Comment><![CDATA[Sensor checks if stopper is occupied]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to9.OrangeUpper.PurpleStopper_2.bStopperSensor</Name>
+							<Comment><![CDATA[Sensor checks if stopper is occupied]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to9.OrangeLower.Motor.bFuse</Name>
+							<Comment><![CDATA[Motor is Running]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to9.OrangeLower.Motor.bThermistor</Name>
+							<Comment><![CDATA[Motor is Ok]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to9.OrangeLower.LTU.bLightBarrier</Name>
+							<Comment><![CDATA[ LTU light sensor ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to9.OrangeLower.LTU.bAtBottom</Name>
+							<Comment><![CDATA[Input At Bottom ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to9.OrangeLower.LTU.bAtMiddle</Name>
+							<Comment><![CDATA[Input At Middle	 ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to9.OrangeLower.LTU.bAtTop</Name>
+							<Comment><![CDATA[Input At Top ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to9.OrangeLower.LTU.LTU_Motor.bFuse</Name>
+							<Comment><![CDATA[Motor is Running]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to9.OrangeLower.LTU.LTU_Motor.bThermistor</Name>
+							<Comment><![CDATA[Motor is Ok]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to9.OrangeLower.BlueStopper.bStopperSensor</Name>
+							<Comment><![CDATA[Sensor checks if stopper is occupied]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to9.OrangeLower.PurpleStopper_1.bStopperSensor</Name>
+							<Comment><![CDATA[Sensor checks if stopper is occupied]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to9.OrangeLower.PurpleStopper_2.bStopperSensor</Name>
+							<Comment><![CDATA[Sensor checks if stopper is occupied]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+					</Vars>
+					<Vars VarGrpType="2" AreaNo="1">
+						<Name>PlcTask Outputs</Name>
+						<Var>
+							<Name>MAIN.fbRoute9to3.GreenRight.Motor.bStart</Name>
+							<Comment><![CDATA[Output to turn motor on]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to3.GreenRight.LTU.bToBottom</Name>
+							<Comment><![CDATA[ Output TO Bottom	]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to3.GreenRight.LTU.bToTop</Name>
+							<Comment><![CDATA[ Output To Top]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to3.GreenRight.LTU.LTU_Motor.bStart</Name>
+							<Comment><![CDATA[Output to turn motor on]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to3.GreenRight.BlueStopper.bStopperCylinder</Name>
+							<Comment><![CDATA[Cylinder moves stopper down]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to3.GreenLeft.Motor.bStart</Name>
+							<Comment><![CDATA[Output to turn motor on]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to3.GreenLeft.LTU.bToBottom</Name>
+							<Comment><![CDATA[ Output TO Bottom	]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to3.GreenLeft.LTU.bToTop</Name>
+							<Comment><![CDATA[ Output To Top]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to3.GreenLeft.LTU.LTU_Motor.bStart</Name>
+							<Comment><![CDATA[Output to turn motor on]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to3.GreenLeft.BlueStopper.bStopperCylinder</Name>
+							<Comment><![CDATA[Cylinder moves stopper down]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to3.OrangeUpper.Motor.bStart</Name>
+							<Comment><![CDATA[Output to turn motor on]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to3.OrangeUpper.LTU.bToBottom</Name>
+							<Comment><![CDATA[ Output TO Bottom	]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to3.OrangeUpper.LTU.bToTop</Name>
+							<Comment><![CDATA[ Output To Top]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to3.OrangeUpper.LTU.LTU_Motor.bStart</Name>
+							<Comment><![CDATA[Output to turn motor on]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to3.OrangeUpper.BlueStopper.bStopperCylinder</Name>
+							<Comment><![CDATA[Cylinder moves stopper down]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to3.OrangeUpper.PurpleStopper_1.bStopperCylinder</Name>
+							<Comment><![CDATA[Cylinder moves stopper down]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to3.OrangeUpper.PurpleStopper_2.bStopperCylinder</Name>
+							<Comment><![CDATA[Cylinder moves stopper down]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to3.OrangeLower.Motor.bStart</Name>
+							<Comment><![CDATA[Output to turn motor on]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to3.OrangeLower.LTU.bToBottom</Name>
+							<Comment><![CDATA[ Output TO Bottom	]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to3.OrangeLower.LTU.bToTop</Name>
+							<Comment><![CDATA[ Output To Top]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to3.OrangeLower.LTU.LTU_Motor.bStart</Name>
+							<Comment><![CDATA[Output to turn motor on]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to3.OrangeLower.BlueStopper.bStopperCylinder</Name>
+							<Comment><![CDATA[Cylinder moves stopper down]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to3.OrangeLower.PurpleStopper_1.bStopperCylinder</Name>
+							<Comment><![CDATA[Cylinder moves stopper down]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to3.OrangeLower.PurpleStopper_2.bStopperCylinder</Name>
+							<Comment><![CDATA[Cylinder moves stopper down]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to6.GreenRight.Motor.bStart</Name>
+							<Comment><![CDATA[Output to turn motor on]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to6.GreenRight.LTU.bToBottom</Name>
+							<Comment><![CDATA[ Output TO Bottom	]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to6.GreenRight.LTU.bToTop</Name>
+							<Comment><![CDATA[ Output To Top]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to6.GreenRight.LTU.LTU_Motor.bStart</Name>
+							<Comment><![CDATA[Output to turn motor on]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to6.GreenRight.BlueStopper.bStopperCylinder</Name>
+							<Comment><![CDATA[Cylinder moves stopper down]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to6.GreenLeft.Motor.bStart</Name>
+							<Comment><![CDATA[Output to turn motor on]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to6.GreenLeft.LTU.bToBottom</Name>
+							<Comment><![CDATA[ Output TO Bottom	]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to6.GreenLeft.LTU.bToTop</Name>
+							<Comment><![CDATA[ Output To Top]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to6.GreenLeft.LTU.LTU_Motor.bStart</Name>
+							<Comment><![CDATA[Output to turn motor on]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to6.GreenLeft.BlueStopper.bStopperCylinder</Name>
+							<Comment><![CDATA[Cylinder moves stopper down]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to6.OrangeUpper.Motor.bStart</Name>
+							<Comment><![CDATA[Output to turn motor on]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to6.OrangeUpper.LTU.bToBottom</Name>
+							<Comment><![CDATA[ Output TO Bottom	]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to6.OrangeUpper.LTU.bToTop</Name>
+							<Comment><![CDATA[ Output To Top]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to6.OrangeUpper.LTU.LTU_Motor.bStart</Name>
+							<Comment><![CDATA[Output to turn motor on]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to6.OrangeUpper.BlueStopper.bStopperCylinder</Name>
+							<Comment><![CDATA[Cylinder moves stopper down]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to6.OrangeUpper.PurpleStopper_1.bStopperCylinder</Name>
+							<Comment><![CDATA[Cylinder moves stopper down]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to6.OrangeUpper.PurpleStopper_2.bStopperCylinder</Name>
+							<Comment><![CDATA[Cylinder moves stopper down]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to6.OrangeLower.Motor.bStart</Name>
+							<Comment><![CDATA[Output to turn motor on]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to6.OrangeLower.LTU.bToBottom</Name>
+							<Comment><![CDATA[ Output TO Bottom	]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to6.OrangeLower.LTU.bToTop</Name>
+							<Comment><![CDATA[ Output To Top]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to6.OrangeLower.LTU.LTU_Motor.bStart</Name>
+							<Comment><![CDATA[Output to turn motor on]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to6.OrangeLower.BlueStopper.bStopperCylinder</Name>
+							<Comment><![CDATA[Cylinder moves stopper down]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to6.OrangeLower.PurpleStopper_1.bStopperCylinder</Name>
+							<Comment><![CDATA[Cylinder moves stopper down]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to6.OrangeLower.PurpleStopper_2.bStopperCylinder</Name>
+							<Comment><![CDATA[Cylinder moves stopper down]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to12.GreenRight.Motor.bStart</Name>
+							<Comment><![CDATA[Output to turn motor on]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to12.GreenRight.LTU.bToBottom</Name>
+							<Comment><![CDATA[ Output TO Bottom	]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to12.GreenRight.LTU.bToTop</Name>
+							<Comment><![CDATA[ Output To Top]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to12.GreenRight.LTU.LTU_Motor.bStart</Name>
+							<Comment><![CDATA[Output to turn motor on]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to12.GreenRight.BlueStopper.bStopperCylinder</Name>
+							<Comment><![CDATA[Cylinder moves stopper down]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to12.GreenLeft.Motor.bStart</Name>
+							<Comment><![CDATA[Output to turn motor on]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to12.GreenLeft.LTU.bToBottom</Name>
+							<Comment><![CDATA[ Output TO Bottom	]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to12.GreenLeft.LTU.bToTop</Name>
+							<Comment><![CDATA[ Output To Top]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to12.GreenLeft.LTU.LTU_Motor.bStart</Name>
+							<Comment><![CDATA[Output to turn motor on]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to12.GreenLeft.BlueStopper.bStopperCylinder</Name>
+							<Comment><![CDATA[Cylinder moves stopper down]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to12.OrangeUpper.Motor.bStart</Name>
+							<Comment><![CDATA[Output to turn motor on]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to12.OrangeUpper.LTU.bToBottom</Name>
+							<Comment><![CDATA[ Output TO Bottom	]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to12.OrangeUpper.LTU.bToTop</Name>
+							<Comment><![CDATA[ Output To Top]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to12.OrangeUpper.LTU.LTU_Motor.bStart</Name>
+							<Comment><![CDATA[Output to turn motor on]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to12.OrangeUpper.BlueStopper.bStopperCylinder</Name>
+							<Comment><![CDATA[Cylinder moves stopper down]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to12.OrangeUpper.PurpleStopper_1.bStopperCylinder</Name>
+							<Comment><![CDATA[Cylinder moves stopper down]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to12.OrangeUpper.PurpleStopper_2.bStopperCylinder</Name>
+							<Comment><![CDATA[Cylinder moves stopper down]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to12.OrangeLower.Motor.bStart</Name>
+							<Comment><![CDATA[Output to turn motor on]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to12.OrangeLower.LTU.bToBottom</Name>
+							<Comment><![CDATA[ Output TO Bottom	]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to12.OrangeLower.LTU.bToTop</Name>
+							<Comment><![CDATA[ Output To Top]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to12.OrangeLower.LTU.LTU_Motor.bStart</Name>
+							<Comment><![CDATA[Output to turn motor on]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to12.OrangeLower.BlueStopper.bStopperCylinder</Name>
+							<Comment><![CDATA[Cylinder moves stopper down]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to12.OrangeLower.PurpleStopper_1.bStopperCylinder</Name>
+							<Comment><![CDATA[Cylinder moves stopper down]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute9to12.OrangeLower.PurpleStopper_2.bStopperCylinder</Name>
+							<Comment><![CDATA[Cylinder moves stopper down]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to6.GreenRight.Motor.bStart</Name>
+							<Comment><![CDATA[Output to turn motor on]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to6.GreenRight.LTU.bToBottom</Name>
+							<Comment><![CDATA[ Output TO Bottom	]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to6.GreenRight.LTU.bToTop</Name>
+							<Comment><![CDATA[ Output To Top]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to6.GreenRight.LTU.LTU_Motor.bStart</Name>
+							<Comment><![CDATA[Output to turn motor on]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to6.GreenRight.BlueStopper.bStopperCylinder</Name>
+							<Comment><![CDATA[Cylinder moves stopper down]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to6.GreenLeft.Motor.bStart</Name>
+							<Comment><![CDATA[Output to turn motor on]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to6.GreenLeft.LTU.bToBottom</Name>
+							<Comment><![CDATA[ Output TO Bottom	]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to6.GreenLeft.LTU.bToTop</Name>
+							<Comment><![CDATA[ Output To Top]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to6.GreenLeft.LTU.LTU_Motor.bStart</Name>
+							<Comment><![CDATA[Output to turn motor on]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to6.GreenLeft.BlueStopper.bStopperCylinder</Name>
+							<Comment><![CDATA[Cylinder moves stopper down]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to6.OrangeUpper.Motor.bStart</Name>
+							<Comment><![CDATA[Output to turn motor on]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to6.OrangeUpper.LTU.bToBottom</Name>
+							<Comment><![CDATA[ Output TO Bottom	]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to6.OrangeUpper.LTU.bToTop</Name>
+							<Comment><![CDATA[ Output To Top]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to6.OrangeUpper.LTU.LTU_Motor.bStart</Name>
+							<Comment><![CDATA[Output to turn motor on]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to6.OrangeUpper.BlueStopper.bStopperCylinder</Name>
+							<Comment><![CDATA[Cylinder moves stopper down]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to6.OrangeUpper.PurpleStopper_1.bStopperCylinder</Name>
+							<Comment><![CDATA[Cylinder moves stopper down]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to6.OrangeUpper.PurpleStopper_2.bStopperCylinder</Name>
+							<Comment><![CDATA[Cylinder moves stopper down]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to6.OrangeLower.Motor.bStart</Name>
+							<Comment><![CDATA[Output to turn motor on]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to6.OrangeLower.LTU.bToBottom</Name>
+							<Comment><![CDATA[ Output TO Bottom	]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to6.OrangeLower.LTU.bToTop</Name>
+							<Comment><![CDATA[ Output To Top]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to6.OrangeLower.LTU.LTU_Motor.bStart</Name>
+							<Comment><![CDATA[Output to turn motor on]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to6.OrangeLower.BlueStopper.bStopperCylinder</Name>
+							<Comment><![CDATA[Cylinder moves stopper down]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to6.OrangeLower.PurpleStopper_1.bStopperCylinder</Name>
+							<Comment><![CDATA[Cylinder moves stopper down]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to6.OrangeLower.PurpleStopper_2.bStopperCylinder</Name>
+							<Comment><![CDATA[Cylinder moves stopper down]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to9.GreenRight.Motor.bStart</Name>
+							<Comment><![CDATA[Output to turn motor on]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to9.GreenRight.LTU.bToBottom</Name>
+							<Comment><![CDATA[ Output TO Bottom	]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to9.GreenRight.LTU.bToTop</Name>
+							<Comment><![CDATA[ Output To Top]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to9.GreenRight.LTU.LTU_Motor.bStart</Name>
+							<Comment><![CDATA[Output to turn motor on]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to9.GreenRight.BlueStopper.bStopperCylinder</Name>
+							<Comment><![CDATA[Cylinder moves stopper down]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to9.GreenLeft.Motor.bStart</Name>
+							<Comment><![CDATA[Output to turn motor on]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to9.GreenLeft.LTU.bToBottom</Name>
+							<Comment><![CDATA[ Output TO Bottom	]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to9.GreenLeft.LTU.bToTop</Name>
+							<Comment><![CDATA[ Output To Top]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to9.GreenLeft.LTU.LTU_Motor.bStart</Name>
+							<Comment><![CDATA[Output to turn motor on]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to9.GreenLeft.BlueStopper.bStopperCylinder</Name>
+							<Comment><![CDATA[Cylinder moves stopper down]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to9.OrangeUpper.Motor.bStart</Name>
+							<Comment><![CDATA[Output to turn motor on]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to9.OrangeUpper.LTU.bToBottom</Name>
+							<Comment><![CDATA[ Output TO Bottom	]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to9.OrangeUpper.LTU.bToTop</Name>
+							<Comment><![CDATA[ Output To Top]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to9.OrangeUpper.LTU.LTU_Motor.bStart</Name>
+							<Comment><![CDATA[Output to turn motor on]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to9.OrangeUpper.BlueStopper.bStopperCylinder</Name>
+							<Comment><![CDATA[Cylinder moves stopper down]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to9.OrangeUpper.PurpleStopper_1.bStopperCylinder</Name>
+							<Comment><![CDATA[Cylinder moves stopper down]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to9.OrangeUpper.PurpleStopper_2.bStopperCylinder</Name>
+							<Comment><![CDATA[Cylinder moves stopper down]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to9.OrangeLower.Motor.bStart</Name>
+							<Comment><![CDATA[Output to turn motor on]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to9.OrangeLower.LTU.bToBottom</Name>
+							<Comment><![CDATA[ Output TO Bottom	]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to9.OrangeLower.LTU.bToTop</Name>
+							<Comment><![CDATA[ Output To Top]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to9.OrangeLower.LTU.LTU_Motor.bStart</Name>
+							<Comment><![CDATA[Output to turn motor on]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to9.OrangeLower.BlueStopper.bStopperCylinder</Name>
+							<Comment><![CDATA[Cylinder moves stopper down]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to9.OrangeLower.PurpleStopper_1.bStopperCylinder</Name>
+							<Comment><![CDATA[Cylinder moves stopper down]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to9.OrangeLower.PurpleStopper_2.bStopperCylinder</Name>
+							<Comment><![CDATA[Cylinder moves stopper down]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to12.GreenRight.Motor.bStart</Name>
+							<Comment><![CDATA[Output to turn motor on]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to12.GreenRight.LTU.bToBottom</Name>
+							<Comment><![CDATA[ Output TO Bottom	]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to12.GreenRight.LTU.bToTop</Name>
+							<Comment><![CDATA[ Output To Top]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to12.GreenRight.LTU.LTU_Motor.bStart</Name>
+							<Comment><![CDATA[Output to turn motor on]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to12.GreenRight.BlueStopper.bStopperCylinder</Name>
+							<Comment><![CDATA[Cylinder moves stopper down]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to12.GreenLeft.Motor.bStart</Name>
+							<Comment><![CDATA[Output to turn motor on]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to12.GreenLeft.LTU.bToBottom</Name>
+							<Comment><![CDATA[ Output TO Bottom	]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to12.GreenLeft.LTU.bToTop</Name>
+							<Comment><![CDATA[ Output To Top]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to12.GreenLeft.LTU.LTU_Motor.bStart</Name>
+							<Comment><![CDATA[Output to turn motor on]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to12.GreenLeft.BlueStopper.bStopperCylinder</Name>
+							<Comment><![CDATA[Cylinder moves stopper down]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to12.OrangeUpper.Motor.bStart</Name>
+							<Comment><![CDATA[Output to turn motor on]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to12.OrangeUpper.LTU.bToBottom</Name>
+							<Comment><![CDATA[ Output TO Bottom	]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to12.OrangeUpper.LTU.bToTop</Name>
+							<Comment><![CDATA[ Output To Top]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to12.OrangeUpper.LTU.LTU_Motor.bStart</Name>
+							<Comment><![CDATA[Output to turn motor on]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to12.OrangeUpper.BlueStopper.bStopperCylinder</Name>
+							<Comment><![CDATA[Cylinder moves stopper down]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to12.OrangeUpper.PurpleStopper_1.bStopperCylinder</Name>
+							<Comment><![CDATA[Cylinder moves stopper down]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to12.OrangeUpper.PurpleStopper_2.bStopperCylinder</Name>
+							<Comment><![CDATA[Cylinder moves stopper down]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to12.OrangeLower.Motor.bStart</Name>
+							<Comment><![CDATA[Output to turn motor on]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to12.OrangeLower.LTU.bToBottom</Name>
+							<Comment><![CDATA[ Output TO Bottom	]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to12.OrangeLower.LTU.bToTop</Name>
+							<Comment><![CDATA[ Output To Top]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to12.OrangeLower.LTU.LTU_Motor.bStart</Name>
+							<Comment><![CDATA[Output to turn motor on]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to12.OrangeLower.BlueStopper.bStopperCylinder</Name>
+							<Comment><![CDATA[Cylinder moves stopper down]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to12.OrangeLower.PurpleStopper_1.bStopperCylinder</Name>
+							<Comment><![CDATA[Cylinder moves stopper down]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute3to12.OrangeLower.PurpleStopper_2.bStopperCylinder</Name>
+							<Comment><![CDATA[Cylinder moves stopper down]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to3.GreenRight.Motor.bStart</Name>
+							<Comment><![CDATA[Output to turn motor on]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to3.GreenRight.LTU.bToBottom</Name>
+							<Comment><![CDATA[ Output TO Bottom	]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to3.GreenRight.LTU.bToTop</Name>
+							<Comment><![CDATA[ Output To Top]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to3.GreenRight.LTU.LTU_Motor.bStart</Name>
+							<Comment><![CDATA[Output to turn motor on]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to3.GreenRight.BlueStopper.bStopperCylinder</Name>
+							<Comment><![CDATA[Cylinder moves stopper down]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to3.GreenLeft.Motor.bStart</Name>
+							<Comment><![CDATA[Output to turn motor on]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to3.GreenLeft.LTU.bToBottom</Name>
+							<Comment><![CDATA[ Output TO Bottom	]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to3.GreenLeft.LTU.bToTop</Name>
+							<Comment><![CDATA[ Output To Top]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to3.GreenLeft.LTU.LTU_Motor.bStart</Name>
+							<Comment><![CDATA[Output to turn motor on]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to3.GreenLeft.BlueStopper.bStopperCylinder</Name>
+							<Comment><![CDATA[Cylinder moves stopper down]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to3.OrangeUpper.Motor.bStart</Name>
+							<Comment><![CDATA[Output to turn motor on]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to3.OrangeUpper.LTU.bToBottom</Name>
+							<Comment><![CDATA[ Output TO Bottom	]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to3.OrangeUpper.LTU.bToTop</Name>
+							<Comment><![CDATA[ Output To Top]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to3.OrangeUpper.LTU.LTU_Motor.bStart</Name>
+							<Comment><![CDATA[Output to turn motor on]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to3.OrangeUpper.BlueStopper.bStopperCylinder</Name>
+							<Comment><![CDATA[Cylinder moves stopper down]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to3.OrangeUpper.PurpleStopper_1.bStopperCylinder</Name>
+							<Comment><![CDATA[Cylinder moves stopper down]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to3.OrangeUpper.PurpleStopper_2.bStopperCylinder</Name>
+							<Comment><![CDATA[Cylinder moves stopper down]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to3.OrangeLower.Motor.bStart</Name>
+							<Comment><![CDATA[Output to turn motor on]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to3.OrangeLower.LTU.bToBottom</Name>
+							<Comment><![CDATA[ Output TO Bottom	]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to3.OrangeLower.LTU.bToTop</Name>
+							<Comment><![CDATA[ Output To Top]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to3.OrangeLower.LTU.LTU_Motor.bStart</Name>
+							<Comment><![CDATA[Output to turn motor on]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to3.OrangeLower.BlueStopper.bStopperCylinder</Name>
+							<Comment><![CDATA[Cylinder moves stopper down]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to3.OrangeLower.PurpleStopper_1.bStopperCylinder</Name>
+							<Comment><![CDATA[Cylinder moves stopper down]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to3.OrangeLower.PurpleStopper_2.bStopperCylinder</Name>
+							<Comment><![CDATA[Cylinder moves stopper down]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to9.GreenRight.Motor.bStart</Name>
+							<Comment><![CDATA[Output to turn motor on]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to9.GreenRight.LTU.bToBottom</Name>
+							<Comment><![CDATA[ Output TO Bottom	]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to9.GreenRight.LTU.bToTop</Name>
+							<Comment><![CDATA[ Output To Top]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to9.GreenRight.LTU.LTU_Motor.bStart</Name>
+							<Comment><![CDATA[Output to turn motor on]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to9.GreenRight.BlueStopper.bStopperCylinder</Name>
+							<Comment><![CDATA[Cylinder moves stopper down]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to9.GreenLeft.Motor.bStart</Name>
+							<Comment><![CDATA[Output to turn motor on]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to9.GreenLeft.LTU.bToBottom</Name>
+							<Comment><![CDATA[ Output TO Bottom	]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to9.GreenLeft.LTU.bToTop</Name>
+							<Comment><![CDATA[ Output To Top]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to9.GreenLeft.LTU.LTU_Motor.bStart</Name>
+							<Comment><![CDATA[Output to turn motor on]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to9.GreenLeft.BlueStopper.bStopperCylinder</Name>
+							<Comment><![CDATA[Cylinder moves stopper down]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to9.OrangeUpper.Motor.bStart</Name>
+							<Comment><![CDATA[Output to turn motor on]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to9.OrangeUpper.LTU.bToBottom</Name>
+							<Comment><![CDATA[ Output TO Bottom	]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to9.OrangeUpper.LTU.bToTop</Name>
+							<Comment><![CDATA[ Output To Top]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to9.OrangeUpper.LTU.LTU_Motor.bStart</Name>
+							<Comment><![CDATA[Output to turn motor on]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to9.OrangeUpper.BlueStopper.bStopperCylinder</Name>
+							<Comment><![CDATA[Cylinder moves stopper down]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to9.OrangeUpper.PurpleStopper_1.bStopperCylinder</Name>
+							<Comment><![CDATA[Cylinder moves stopper down]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to9.OrangeUpper.PurpleStopper_2.bStopperCylinder</Name>
+							<Comment><![CDATA[Cylinder moves stopper down]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to9.OrangeLower.Motor.bStart</Name>
+							<Comment><![CDATA[Output to turn motor on]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to9.OrangeLower.LTU.bToBottom</Name>
+							<Comment><![CDATA[ Output TO Bottom	]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to9.OrangeLower.LTU.bToTop</Name>
+							<Comment><![CDATA[ Output To Top]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to9.OrangeLower.LTU.LTU_Motor.bStart</Name>
+							<Comment><![CDATA[Output to turn motor on]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to9.OrangeLower.BlueStopper.bStopperCylinder</Name>
+							<Comment><![CDATA[Cylinder moves stopper down]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to9.OrangeLower.PurpleStopper_1.bStopperCylinder</Name>
+							<Comment><![CDATA[Cylinder moves stopper down]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to9.OrangeLower.PurpleStopper_2.bStopperCylinder</Name>
+							<Comment><![CDATA[Cylinder moves stopper down]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to12.GreenRight.Motor.bStart</Name>
+							<Comment><![CDATA[Output to turn motor on]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to12.GreenRight.LTU.bToBottom</Name>
+							<Comment><![CDATA[ Output TO Bottom	]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to12.GreenRight.LTU.bToTop</Name>
+							<Comment><![CDATA[ Output To Top]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to12.GreenRight.LTU.LTU_Motor.bStart</Name>
+							<Comment><![CDATA[Output to turn motor on]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to12.GreenRight.BlueStopper.bStopperCylinder</Name>
+							<Comment><![CDATA[Cylinder moves stopper down]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to12.GreenLeft.Motor.bStart</Name>
+							<Comment><![CDATA[Output to turn motor on]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to12.GreenLeft.LTU.bToBottom</Name>
+							<Comment><![CDATA[ Output TO Bottom	]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to12.GreenLeft.LTU.bToTop</Name>
+							<Comment><![CDATA[ Output To Top]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to12.GreenLeft.LTU.LTU_Motor.bStart</Name>
+							<Comment><![CDATA[Output to turn motor on]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to12.GreenLeft.BlueStopper.bStopperCylinder</Name>
+							<Comment><![CDATA[Cylinder moves stopper down]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to12.OrangeUpper.Motor.bStart</Name>
+							<Comment><![CDATA[Output to turn motor on]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to12.OrangeUpper.LTU.bToBottom</Name>
+							<Comment><![CDATA[ Output TO Bottom	]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to12.OrangeUpper.LTU.bToTop</Name>
+							<Comment><![CDATA[ Output To Top]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to12.OrangeUpper.LTU.LTU_Motor.bStart</Name>
+							<Comment><![CDATA[Output to turn motor on]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to12.OrangeUpper.BlueStopper.bStopperCylinder</Name>
+							<Comment><![CDATA[Cylinder moves stopper down]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to12.OrangeUpper.PurpleStopper_1.bStopperCylinder</Name>
+							<Comment><![CDATA[Cylinder moves stopper down]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to12.OrangeUpper.PurpleStopper_2.bStopperCylinder</Name>
+							<Comment><![CDATA[Cylinder moves stopper down]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to12.OrangeLower.Motor.bStart</Name>
+							<Comment><![CDATA[Output to turn motor on]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to12.OrangeLower.LTU.bToBottom</Name>
+							<Comment><![CDATA[ Output TO Bottom	]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to12.OrangeLower.LTU.bToTop</Name>
+							<Comment><![CDATA[ Output To Top]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to12.OrangeLower.LTU.LTU_Motor.bStart</Name>
+							<Comment><![CDATA[Output to turn motor on]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to12.OrangeLower.BlueStopper.bStopperCylinder</Name>
+							<Comment><![CDATA[Cylinder moves stopper down]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to12.OrangeLower.PurpleStopper_1.bStopperCylinder</Name>
+							<Comment><![CDATA[Cylinder moves stopper down]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute6to12.OrangeLower.PurpleStopper_2.bStopperCylinder</Name>
+							<Comment><![CDATA[Cylinder moves stopper down]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to3.GreenRight.Motor.bStart</Name>
+							<Comment><![CDATA[Output to turn motor on]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to3.GreenRight.LTU.bToBottom</Name>
+							<Comment><![CDATA[ Output TO Bottom	]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to3.GreenRight.LTU.bToTop</Name>
+							<Comment><![CDATA[ Output To Top]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to3.GreenRight.LTU.LTU_Motor.bStart</Name>
+							<Comment><![CDATA[Output to turn motor on]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to3.GreenRight.BlueStopper.bStopperCylinder</Name>
+							<Comment><![CDATA[Cylinder moves stopper down]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to3.GreenLeft.Motor.bStart</Name>
+							<Comment><![CDATA[Output to turn motor on]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to3.GreenLeft.LTU.bToBottom</Name>
+							<Comment><![CDATA[ Output TO Bottom	]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to3.GreenLeft.LTU.bToTop</Name>
+							<Comment><![CDATA[ Output To Top]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to3.GreenLeft.LTU.LTU_Motor.bStart</Name>
+							<Comment><![CDATA[Output to turn motor on]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to3.GreenLeft.BlueStopper.bStopperCylinder</Name>
+							<Comment><![CDATA[Cylinder moves stopper down]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to3.OrangeUpper.Motor.bStart</Name>
+							<Comment><![CDATA[Output to turn motor on]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to3.OrangeUpper.LTU.bToBottom</Name>
+							<Comment><![CDATA[ Output TO Bottom	]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to3.OrangeUpper.LTU.bToTop</Name>
+							<Comment><![CDATA[ Output To Top]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to3.OrangeUpper.LTU.LTU_Motor.bStart</Name>
+							<Comment><![CDATA[Output to turn motor on]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to3.OrangeUpper.BlueStopper.bStopperCylinder</Name>
+							<Comment><![CDATA[Cylinder moves stopper down]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to3.OrangeUpper.PurpleStopper_1.bStopperCylinder</Name>
+							<Comment><![CDATA[Cylinder moves stopper down]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to3.OrangeUpper.PurpleStopper_2.bStopperCylinder</Name>
+							<Comment><![CDATA[Cylinder moves stopper down]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to3.OrangeLower.Motor.bStart</Name>
+							<Comment><![CDATA[Output to turn motor on]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to3.OrangeLower.LTU.bToBottom</Name>
+							<Comment><![CDATA[ Output TO Bottom	]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to3.OrangeLower.LTU.bToTop</Name>
+							<Comment><![CDATA[ Output To Top]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to3.OrangeLower.LTU.LTU_Motor.bStart</Name>
+							<Comment><![CDATA[Output to turn motor on]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to3.OrangeLower.BlueStopper.bStopperCylinder</Name>
+							<Comment><![CDATA[Cylinder moves stopper down]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to3.OrangeLower.PurpleStopper_1.bStopperCylinder</Name>
+							<Comment><![CDATA[Cylinder moves stopper down]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to3.OrangeLower.PurpleStopper_2.bStopperCylinder</Name>
+							<Comment><![CDATA[Cylinder moves stopper down]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to6.GreenRight.Motor.bStart</Name>
+							<Comment><![CDATA[Output to turn motor on]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to6.GreenRight.LTU.bToBottom</Name>
+							<Comment><![CDATA[ Output TO Bottom	]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to6.GreenRight.LTU.bToTop</Name>
+							<Comment><![CDATA[ Output To Top]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to6.GreenRight.LTU.LTU_Motor.bStart</Name>
+							<Comment><![CDATA[Output to turn motor on]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to6.GreenRight.BlueStopper.bStopperCylinder</Name>
+							<Comment><![CDATA[Cylinder moves stopper down]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to6.GreenLeft.Motor.bStart</Name>
+							<Comment><![CDATA[Output to turn motor on]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to6.GreenLeft.LTU.bToBottom</Name>
+							<Comment><![CDATA[ Output TO Bottom	]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to6.GreenLeft.LTU.bToTop</Name>
+							<Comment><![CDATA[ Output To Top]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to6.GreenLeft.LTU.LTU_Motor.bStart</Name>
+							<Comment><![CDATA[Output to turn motor on]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to6.GreenLeft.BlueStopper.bStopperCylinder</Name>
+							<Comment><![CDATA[Cylinder moves stopper down]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to6.OrangeUpper.Motor.bStart</Name>
+							<Comment><![CDATA[Output to turn motor on]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to6.OrangeUpper.LTU.bToBottom</Name>
+							<Comment><![CDATA[ Output TO Bottom	]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to6.OrangeUpper.LTU.bToTop</Name>
+							<Comment><![CDATA[ Output To Top]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to6.OrangeUpper.LTU.LTU_Motor.bStart</Name>
+							<Comment><![CDATA[Output to turn motor on]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to6.OrangeUpper.BlueStopper.bStopperCylinder</Name>
+							<Comment><![CDATA[Cylinder moves stopper down]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to6.OrangeUpper.PurpleStopper_1.bStopperCylinder</Name>
+							<Comment><![CDATA[Cylinder moves stopper down]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to6.OrangeUpper.PurpleStopper_2.bStopperCylinder</Name>
+							<Comment><![CDATA[Cylinder moves stopper down]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to6.OrangeLower.Motor.bStart</Name>
+							<Comment><![CDATA[Output to turn motor on]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to6.OrangeLower.LTU.bToBottom</Name>
+							<Comment><![CDATA[ Output TO Bottom	]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to6.OrangeLower.LTU.bToTop</Name>
+							<Comment><![CDATA[ Output To Top]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to6.OrangeLower.LTU.LTU_Motor.bStart</Name>
+							<Comment><![CDATA[Output to turn motor on]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to6.OrangeLower.BlueStopper.bStopperCylinder</Name>
+							<Comment><![CDATA[Cylinder moves stopper down]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to6.OrangeLower.PurpleStopper_1.bStopperCylinder</Name>
+							<Comment><![CDATA[Cylinder moves stopper down]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to6.OrangeLower.PurpleStopper_2.bStopperCylinder</Name>
+							<Comment><![CDATA[Cylinder moves stopper down]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to9.GreenRight.Motor.bStart</Name>
+							<Comment><![CDATA[Output to turn motor on]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to9.GreenRight.LTU.bToBottom</Name>
+							<Comment><![CDATA[ Output TO Bottom	]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to9.GreenRight.LTU.bToTop</Name>
+							<Comment><![CDATA[ Output To Top]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to9.GreenRight.LTU.LTU_Motor.bStart</Name>
+							<Comment><![CDATA[Output to turn motor on]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to9.GreenRight.BlueStopper.bStopperCylinder</Name>
+							<Comment><![CDATA[Cylinder moves stopper down]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to9.GreenLeft.Motor.bStart</Name>
+							<Comment><![CDATA[Output to turn motor on]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to9.GreenLeft.LTU.bToBottom</Name>
+							<Comment><![CDATA[ Output TO Bottom	]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to9.GreenLeft.LTU.bToTop</Name>
+							<Comment><![CDATA[ Output To Top]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to9.GreenLeft.LTU.LTU_Motor.bStart</Name>
+							<Comment><![CDATA[Output to turn motor on]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to9.GreenLeft.BlueStopper.bStopperCylinder</Name>
+							<Comment><![CDATA[Cylinder moves stopper down]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to9.OrangeUpper.Motor.bStart</Name>
+							<Comment><![CDATA[Output to turn motor on]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to9.OrangeUpper.LTU.bToBottom</Name>
+							<Comment><![CDATA[ Output TO Bottom	]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to9.OrangeUpper.LTU.bToTop</Name>
+							<Comment><![CDATA[ Output To Top]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to9.OrangeUpper.LTU.LTU_Motor.bStart</Name>
+							<Comment><![CDATA[Output to turn motor on]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to9.OrangeUpper.BlueStopper.bStopperCylinder</Name>
+							<Comment><![CDATA[Cylinder moves stopper down]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to9.OrangeUpper.PurpleStopper_1.bStopperCylinder</Name>
+							<Comment><![CDATA[Cylinder moves stopper down]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to9.OrangeUpper.PurpleStopper_2.bStopperCylinder</Name>
+							<Comment><![CDATA[Cylinder moves stopper down]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to9.OrangeLower.Motor.bStart</Name>
+							<Comment><![CDATA[Output to turn motor on]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to9.OrangeLower.LTU.bToBottom</Name>
+							<Comment><![CDATA[ Output TO Bottom	]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to9.OrangeLower.LTU.bToTop</Name>
+							<Comment><![CDATA[ Output To Top]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to9.OrangeLower.LTU.LTU_Motor.bStart</Name>
+							<Comment><![CDATA[Output to turn motor on]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to9.OrangeLower.BlueStopper.bStopperCylinder</Name>
+							<Comment><![CDATA[Cylinder moves stopper down]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to9.OrangeLower.PurpleStopper_1.bStopperCylinder</Name>
+							<Comment><![CDATA[Cylinder moves stopper down]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbRoute12to9.OrangeLower.PurpleStopper_2.bStopperCylinder</Name>
+							<Comment><![CDATA[Cylinder moves stopper down]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+					</Vars>
+					<Contexts>
+						<Context>
+							<Id NeedCalleeCall="true">0</Id>
+							<Name>PlcTask</Name>
+							<ManualConfig>
+								<OTCID>#x02010030</OTCID>
+							</ManualConfig>
+							<Priority>20</Priority>
+							<CycleTime>30000000</CycleTime>
+						</Context>
+					</Contexts>
+					<TaskPouOids>
+						<TaskPouOid Prio="20" OTCID="#x08502001"/>
+					</TaskPouOids>
+				</Instance>
+			</Project>
+		</Plc>
+	</Project>
+</TcSmProject>

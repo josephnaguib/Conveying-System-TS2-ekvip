@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="MAIN" Id="{559f2048-a69d-42fd-9549-0730abea6e48}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM MAIN
+VAR
+	fbReader			:FB_Reader;
+	fbRoute3to6			:FB_Route3to6;
+	fbRoute3to9			:FB_Route3to9;
+	fbRoute3to12		:FB_Route3to12;
+	fbRoute6to3			:FB_Route6to3;
+	fbRoute6to9			:FB_Route6to9;
+	fbRoute6to12		:FB_Route6to12;
+	fbRoute9to3			:FB_Route9to3;
+	fbRoute9to6			:FB_Route9to6;
+	fbRoute9to12		:FB_Route9to12;
+	fbRoute12to3		:FB_Route12to3;
+	fbRoute12to6		:FB_Route12to6;
+	fbRoute12to9		:FB_Route12to9;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[Reader();	
+fbRoute3to6();		
+fbRoute3to9();			
+fbRoute3to12();		
+fbRoute6to3();		
+fbRoute6to9();		
+fbRoute6to12();	
+fbRoute9to3	();
+fbRoute9to6();
+fbRoute9to12();	
+fbRoute12to3();		
+fbRoute12to6();		
+fbRoute12to9();		]]></ST>
+    </Implementation>
+    <LineIds Name="MAIN">
+      <LineId Id="128" Count="0" />
+      <LineId Id="123" Count="0" />
+      <LineId Id="172" Count="4" />
+      <LineId Id="198" Count="1" />
+      <LineId Id="197" Count="0" />
+      <LineId Id="177" Count="2" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

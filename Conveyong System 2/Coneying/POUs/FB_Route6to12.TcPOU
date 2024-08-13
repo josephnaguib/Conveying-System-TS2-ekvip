@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="FB_Route6to12" Id="{ddba99bf-2207-499b-ae87-c19ec32d6e3a}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_Route6to12
+VAR
+	GreenRight	:FB_GreenConveyor;				//Right Green Conveyor
+	GreenLeft	:FB_GreenConveyor;				//Left Green Conveyor
+	OrangeUpper	:FB_OrangeConveyor;				//Upper Orange Conveyor
+	OrangeLower	:FB_OrangeConveyor;				//Lower Orange Conveyor
+	nStatus: INT;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[CASE nStatus OF
+	0:	GreenLeft.Motor.RunMotor();
+		//Reader();
+		IF Random.number=12 THEN
+		nStatus:=10;
+	END_IF
+	
+	10:	IF  GreenLeft.LTU.Occupied THEN					//chConveyot_GL.upied
+			GreenLeft.BlueStopper.MoveStopper();			//If occupied move stopper
+			nStatus:=20;
+			ELSE
+			GreenLeft.LTU.MoveBottom();					//LTU Move bottom to saty on green
+			nStatus:=20;									//jmp to state 10
+		END_IF										
+	20:	IF NOT OrangeUpper.LTU.Occupied THEN				//check LTU occupied
+					OrangeUpper.LTU.MoveBottom();			//LTU Move bottom to saty on green
+					ELSE
+					GreenLeft.LTU.MoveMiddle();			//LTU Move middle to stop on green
+					nStatus:=30;	
+				END_IF
+	30:	nStatus:=0;
+END_CASE]]></ST>
+    </Implementation>
+    <LineIds Name="FB_Route6to12">
+      <LineId Id="30" Count="20" />
+      <LineId Id="9" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

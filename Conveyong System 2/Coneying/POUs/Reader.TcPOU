@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="Reader" Id="{9d2d486f-b22e-40c1-bfd5-bf17de1419d8}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION Reader : INT
+VAR
+	numbers : ARRAY[1..5] OF INT := [12, 3, 6, 9];  // Your set of numbers
+	
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[Random.number:=Random.number+3;
+IF Random.number>12 THEN
+	Random.number:=0;
+END_IF]]></ST>
+    </Implementation>
+    <LineIds Name="Reader">
+      <LineId Id="28" Count="0" />
+      <LineId Id="44" Count="2" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

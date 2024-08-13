@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="FB_OrangeConveyor" Id="{2bfa092c-6bf0-4d1c-991c-224c2a5d6655}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_OrangeConveyor
+VAR
+	Motor					:FB_ConveyorMotor;
+	LTU						:FB_LTU_Cylinder;	
+    BlueStopper				:FB_Stopper;
+	PurpleStopper_1			:FB_Stopper;
+	PurpleStopper_2			:FB_Stopper;
+    nStatus					:INT:=0;					
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <LineIds Name="FB_OrangeConveyor">
+      <LineId Id="9" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

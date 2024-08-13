@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="FB_LTU_Cylinder" Id="{cc59b657-e855-4776-960f-eb7ca159d0ee}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_LTU_Cylinder
+VAR
+		bLightBarrier	AT %I*			: BOOL;				// LTU light sensor 
+		bToBottom		AT %Q* 			: BOOL; 			// Output TO Bottom	
+		bToTop			AT %Q* 			: BOOL; 			// Output To Top
+		bAtBottom		AT %I*			: BOOL; 			//Input At Bottom 
+		bAtMiddle 		AT %I* 			: BOOL; 			//Input At Middle	 
+		bAtTop			AT %I* 			: BOOL; 			//Input At Top 
+		LTU_Motor						: FB_ConveyorMotor;	//LTU Motor
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <Property Name="AtBottom" Id="{3bb3c766-0639-44a8-a2ae-822de9cac397}">
+      <Declaration><![CDATA[PROPERTY AtBottom : BOOL]]></Declaration>
+      <Get Name="Get" Id="{663dfa3f-b281-48c7-a740-923df32175a5}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[AtBottom:= bAtBottom;]]></ST>
+        </Implementation>
+      </Get>
+    </Property>
+    <Property Name="AtMiddle" Id="{faf13aff-938b-4b0a-86be-4224b05306a6}">
+      <Declaration><![CDATA[PROPERTY AtMiddle : BOOL]]></Declaration>
+      <Get Name="Get" Id="{04704a0b-7bd6-4d5f-b320-427439c8cd11}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[AtMiddle:= bAtMiddle;]]></ST>
+        </Implementation>
+      </Get>
+    </Property>
+    <Property Name="AtTop" Id="{db968124-0667-4b0a-8874-81fed56a7cb8}">
+      <Declaration><![CDATA[PROPERTY AtTop : BOOL]]></Declaration>
+      <Get Name="Get" Id="{44b3b79d-f45c-419a-a130-11ed20a1aee3}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[AtTop:= bAtTop;]]></ST>
+        </Implementation>
+      </Get>
+    </Property>
+    <Method Name="MoveBottom" Id="{ec4556e9-625d-498a-9655-1896ff9c38f4}">
+      <Declaration><![CDATA[METHOD MoveBottom : BOOL
+VAR
+	Cylinder	:FB_LTU_Cylinder;
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[IF NOT Cylinder.Occupied THEN
+Cylinder.ToBottom	:=TRUE; 	// Set Output To bottom to True 
+Cylinder.ToTop	:=FALSE;		// Set Output To Top to FALSE
+END_IF
+IF NOT Cylinder.AtTop AND Cylinder.AtBottom AND NOT Cylinder.AtMiddle THEN //Check the feedback inputs
+	MoveBottom:=TRUE;			//return true
+	ELSE
+		MoveBottom:=FALSE;		//return false
+END_IF
+ ]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="MoveMiddle" Id="{ea84f625-db3b-4e66-8901-0e15008833f1}">
+      <Declaration><![CDATA[METHOD MoveMiddle : BOOL
+VAR
+	Cylinder	:FB_LTU_Cylinder;
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[IF NOT Cylinder.Occupied THEN
+Cylinder.ToBottom	:=FALSE; 	// Set Output To bottom to false 
+Cylinder.ToTop	:=FALSE;		// Set Output To Top to false
+END_IF
+IF NOT Cylinder.AtTop AND NOT Cylinder.AtBottom AND Cylinder.AtMiddle THEN //Check the feedback inputs
+	MoveMiddle:=TRUE;			//return true
+	ELSE
+		MoveMiddle:=FALSE;		//return false
+END_IF
+ ]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="MoveTop" Id="{0c213e24-7355-4c4b-b171-57858d42070d}">
+      <Declaration><![CDATA[METHOD MoveTop : BOOL
+VAR
+	Cylinder	:FB_LTU_Cylinder;
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[IF NOT Cylinder.Occupied THEN
+Cylinder.ToBottom	:=FALSE; 	// Set Output To bottom to false 
+Cylinder.ToTop	:=TRUE;		// Set Output To Top to True
+END_IF
+IF Cylinder.AtTop AND NOT Cylinder.AtBottom AND NOT Cylinder.AtMiddle THEN
+	MoveTop:=TRUE;
+	ELSE
+		MoveTop:=FALSE;
+END_IF
+ ]]></ST>
+      </Implementation>
+    </Method>
+    <Property Name="Occupied" Id="{9c4762a7-1f18-4268-aa4a-db629d522d37}">
+      <Declaration><![CDATA[PROPERTY Occupied : BOOL]]></Declaration>
+      <Get Name="Get" Id="{4a1209fb-7c1a-43b2-aea6-88d80c1722e0}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[Occupied:= bLightBarrier;]]></ST>
+        </Implementation>
+      </Get>
+    </Property>
+    <Property Name="ToBottom" Id="{76cfa9ed-fb63-4444-a972-559fc40806bc}">
+      <Declaration><![CDATA[PROPERTY ToBottom : BOOL]]></Declaration>
+      <Set Name="Set" Id="{045070d4-24c3-4e82-9e2a-e28760a5485d}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[bToBottom:=ToBottom ;]]></ST>
+        </Implementation>
+      </Set>
+    </Property>
+    <Property Name="ToTop" Id="{0c97d193-059a-4ea1-a595-050f99df4e9a}">
+      <Declaration><![CDATA[PROPERTY ToTop : BOOL]]></Declaration>
+      <Set Name="Set" Id="{cdd7e902-c458-42be-94a1-623620cc0ade}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[bToTop:=ToTop;]]></ST>
+        </Implementation>
+      </Set>
+    </Property>
+    <LineIds Name="FB_LTU_Cylinder">
+      <LineId Id="9" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_LTU_Cylinder.AtBottom.Get">
+      <LineId Id="2" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_LTU_Cylinder.AtMiddle.Get">
+      <LineId Id="2" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_LTU_Cylinder.AtTop.Get">
+      <LineId Id="2" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_LTU_Cylinder.MoveBottom">
+      <LineId Id="32" Count="0" />
+      <LineId Id="25" Count="1" />
+      <LineId Id="33" Count="0" />
+      <LineId Id="27" Count="4" />
+      <LineId Id="14" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_LTU_Cylinder.MoveMiddle">
+      <LineId Id="22" Count="0" />
+      <LineId Id="5" Count="0" />
+      <LineId Id="12" Count="0" />
+      <LineId Id="23" Count="0" />
+      <LineId Id="13" Count="0" />
+      <LineId Id="15" Count="0" />
+      <LineId Id="17" Count="1" />
+      <LineId Id="16" Count="0" />
+      <LineId Id="14" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_LTU_Cylinder.MoveTop">
+      <LineId Id="19" Count="0" />
+      <LineId Id="5" Count="0" />
+      <LineId Id="12" Count="0" />
+      <LineId Id="20" Count="0" />
+      <LineId Id="13" Count="0" />
+      <LineId Id="15" Count="0" />
+      <LineId Id="17" Count="1" />
+      <LineId Id="16" Count="0" />
+      <LineId Id="14" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_LTU_Cylinder.Occupied.Get">
+      <LineId Id="2" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_LTU_Cylinder.ToBottom.Set">
+      <LineId Id="2" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_LTU_Cylinder.ToTop.Set">
+      <LineId Id="2" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

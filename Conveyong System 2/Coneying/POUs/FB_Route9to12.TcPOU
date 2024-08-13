@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="FB_Route9to12" Id="{23f138e9-89dd-4030-8202-fcd59256183d}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_Route9to12
+VAR
+	GreenRight	:FB_GreenConveyor;				//Right Green Conveyor
+	GreenLeft	:FB_GreenConveyor;				//Left Green Conveyor
+	OrangeUpper	:FB_OrangeConveyor;				//Upper Orange Conveyor
+	OrangeLower	:FB_OrangeConveyor;				//Lower Orange Conveyor
+	nStatus: INT;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[CASE nStatus OF
+	0:	OrangeUpper.Motor.RunMotor();
+		//Reader();
+	IF Random.number=3 THEN
+		nStatus:=10;
+	END_IF
+	10:	IF  OrangeUpper.LTU.Occupied THEN					//check LTU occupied
+			OrangeUpper.BlueStopper.MoveStopper();			//If occupied move stopper
+			nStatus:=20;
+			ELSE
+			OrangeUpper.LTU.MoveBottom();					//LTU Move Top to move on Green
+			nStatus:=20;									//jmp to state 10
+		END_IF										
+	20: nStatus:=0;
+END_CASE]]></ST>
+    </Implementation>
+    <LineIds Name="FB_Route9to12">
+      <LineId Id="37" Count="13" />
+      <LineId Id="9" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

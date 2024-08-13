@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="FB_ConveyorMotor" Id="{fc0b36fa-73c9-45f9-8d9a-ec2e7801497a}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_ConveyorMotor
+VAR
+	bStart			AT%Q*		:BOOL;	//Output to turn motor on
+	bFuse			AT%I*		:BOOL;	//Motor is Running
+	bThermistor		AT%I*		:BOOL;	//Motor is Ok
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <Property Name="Fuse" Id="{2d6fa50e-bf84-4d88-9639-7953081bf742}">
+      <Declaration><![CDATA[PROPERTY Fuse : BOOL]]></Declaration>
+      <Get Name="Get" Id="{4c4141f4-d864-4f70-9931-a1d7b4fe74eb}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[Fuse:=bFuse;]]></ST>
+        </Implementation>
+      </Get>
+    </Property>
+    <Method Name="RunMotor" Id="{93d74e23-87ee-4e6a-bcc2-7dbead150d0e}">
+      <Declaration><![CDATA[METHOD RunMotor : BOOL
+VAR
+	Motor	:FB_ConveyorMotor;
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[IF Motor.bStart AND NOT FUSE AND NOT Thermistor THEN
+	RunMotor:=TRUE;
+	ELSE
+	RunMotor:=FALSE;
+END_IF]]></ST>
+      </Implementation>
+    </Method>
+    <Property Name="Start" Id="{8dd4e5fe-37f4-41c8-9bf2-6aaf2b742374}">
+      <Declaration><![CDATA[PROPERTY Start : BOOL]]></Declaration>
+      <Set Name="Set" Id="{b270632a-1bdd-475b-86fb-96186f35a726}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[bStart:=Start;]]></ST>
+        </Implementation>
+      </Set>
+    </Property>
+    <Property Name="Thermistor" Id="{38752e4c-53e8-4720-be90-1dc76faae53d}">
+      <Declaration><![CDATA[PROPERTY Thermistor : BOOL]]></Declaration>
+      <Get Name="Get" Id="{95c6ac38-0f77-4bc6-ab86-a79efd819dde}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[Thermistor:=bThermistor;]]></ST>
+        </Implementation>
+      </Get>
+    </Property>
+    <LineIds Name="FB_ConveyorMotor">
+      <LineId Id="9" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_ConveyorMotor.Fuse.Get">
+      <LineId Id="2" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_ConveyorMotor.RunMotor">
+      <LineId Id="5" Count="1" />
+      <LineId Id="8" Count="1" />
+      <LineId Id="7" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_ConveyorMotor.Start.Set">
+      <LineId Id="2" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_ConveyorMotor.Thermistor.Get">
+      <LineId Id="2" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

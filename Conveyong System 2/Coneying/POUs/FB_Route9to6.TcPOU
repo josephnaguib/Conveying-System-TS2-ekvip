@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="FB_Route9to6" Id="{4054b006-1a10-4660-8e43-5450c4e904e6}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_Route9to6
+VAR
+	GreenRight	:FB_GreenConveyor;				//Right Green Conveyor
+	GreenLeft	:FB_GreenConveyor;				//Left Green Conveyor
+	OrangeUpper	:FB_OrangeConveyor;				//Upper Orange Conveyor
+	OrangeLower	:FB_OrangeConveyor;				//Lower Orange Conveyor
+	nStatus: INT;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[CASE nStatus OF
+	0:	OrangeUpper.Motor.RunMotor();
+		//Reader();
+	IF Random.number=6 THEN
+		nStatus:=10;
+	END_IF
+	10:	IF  OrangeUpper.LTU.Occupied THEN					//check LTU occupied
+			OrangeUpper.BlueStopper.MoveStopper();			//If occupied move stopper
+			nStatus:=20;
+			ELSE
+			OrangeUpper.LTU.MoveTop();					//LTU Move Top to saty on Orange
+			nStatus:=20;									//jmp to state 10
+		END_IF										
+	20:	IF  GreenRight.LTU.Occupied THEN							//check LTU occupied
+					OrangeUpper.PurpleStopper_1.MoveStopper();			//LTU Move bottom to saty on green
+					ELSE
+					OrangeUpper.PurpleStopper_1.StopperDown();	
+					nStatus:=30;
+				END_IF
+	30: IF  OrangeLower.LTU.Occupied THEN							//check LTU occupied
+					GreenRight.LTU.MoveMiddle();			//LTU Move middle to stop on green
+					ELSE
+					GreenRight.LTU.MoveBottom();			//LTU Move bottom to move on green
+					nStatus:=40;
+				END_IF
+	40:	nStatus:=0;
+END_CASE]]></ST>
+    </Implementation>
+    <LineIds Name="FB_Route9to6">
+      <LineId Id="44" Count="25" />
+      <LineId Id="9" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>
